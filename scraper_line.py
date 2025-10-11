@@ -51,29 +51,14 @@ def get_items(url):
         "Chrome/118.0.5993.118 Safari/537.36"
     )
 
-    # ✅ Render環境のChromeパスを環境変数から取得
+    # ✅ Render 環境の Chrome パスを環境変数から取得
     chrome_path = os.getenv("CHROME_BIN")
-
-    # ⚠️ ← このifブロックがインデント間違っていたので修正
     if not chrome_path or not os.path.exists(chrome_path):
-        possible_paths = [
-            "/usr/bin/google-chrome-stable",
-            "/usr/bin/google-chrome",
-            "/usr/bin/chromium-browser",
-            "/usr/bin/chromium"
-        ]
-        for path in possible_paths:
-            if os.path.exists(path):
-                chrome_path = path
-                break
-
-    if not chrome_path or not os.path.exists(chrome_path):
-        raise FileNotFoundError("❌ Chrome 実行ファイルが見つかりません")
+        raise FileNotFoundError(f"❌ Chrome 実行ファイルが見つかりません: {chrome_path}")
 
     options.binary_location = chrome_path
     print(f"✅ Chrome 実行ファイル: {chrome_path}")
 
-    # ✅ ChromeDriver起動
     print("ChromeDriver 起動中...")
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager().install()),
@@ -91,6 +76,8 @@ def get_items(url):
         f.write(soup.prettify())
 
     driver.quit()
+    ...
+
 
     items = []
     for li in soup.select("ul.itemCardList li"):
