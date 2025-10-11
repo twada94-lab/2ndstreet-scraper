@@ -1,17 +1,24 @@
 services:
-  - type: cron
+  - type: worker
     name: 2ndstreet-scraper
     env: python
-    schedule: "*/15 * * * *"
+    plan: free
+    autoDeploy: true
+
     buildCommand: |
       apt-get update
-      apt-get install -y wget gnupg unzip curl
-      wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
-      echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
-      apt-get update
-      apt-get install -y google-chrome-stable
+      apt-get install -y chromium-browser chromium-chromedriver
       pip install -r requirements.txt
+
     startCommand: |
-      export CHROME_BIN=$(which google-chrome-stable)
-      echo "✅ Chrome binary path: $CHROME_BIN"
-      python scraper_line.py
+      export CHROME_BIN=$(which chromium-browser || which google-chrome || which chromium)
+      echo "✅ CHROME_BIN=$CHROME_BIN"
+      python main.py
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: LINE_ACCESS_TOKEN
+        sync: false
+      - key: LINE_USER_ID
+        sync: false
