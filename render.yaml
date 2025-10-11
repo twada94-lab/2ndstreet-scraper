@@ -1,15 +1,9 @@
 services:
-  - type: web
+  - type: cron
     name: 2ndstreet-scraper
     env: python
-    plan: free
+    schedule: "*/15 * * * *"  # 15分おきに実行
     buildCommand: |
-      apt-get update
-      apt-get install -y chromium-browser chromium-driver
+      apt-get update && apt-get install -y chromium chromium-driver
       pip install -r requirements.txt
     startCommand: python scraper_line.py
-    envVars:
-      - key: LINE_ACCESS_TOKEN
-        value: "48MZBofEnL2CTS8ciE1Z6Jb9bIs/Yt+SK/SJ4lTqh3J20ec2xH90MkdQ60+uvF+/RSaIuQQOaQVK0+YUOMcMTrsq5K/ILBPkX1vi9W0ZBOpJ556ZWlUeV2GW0zSCSdyZKLTwrtySzt8dXXWs62TzfQdB04t89/1O/w1cDnyilFU="
-      - key: LINE_USER_ID
-        value: "U54af60e7c9fa2e22dab3b148b5188d8c"
