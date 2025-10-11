@@ -2,8 +2,11 @@ services:
   - type: cron
     name: 2ndstreet-scraper
     env: python
-    schedule: "*/15 * * * *"  # 15分おきに実行
+    schedule: "*/15 * * * *"
     buildCommand: |
-      apt-get update && apt-get install -y chromium chromium-driver
+      apt-get update
+      apt-get install -y wget gnupg unzip
+      wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      apt-get install -y ./google-chrome-stable_current_amd64.deb
       pip install -r requirements.txt
     startCommand: python scraper_line.py
