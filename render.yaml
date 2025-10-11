@@ -1,0 +1,9 @@
+services:
+  - type: cron
+    name: 2ndstreet-scraper
+    env: python
+    buildCommand: |
+      apt-get update && apt-get install -y chromium-browser
+      pip install -r requirements.txt
+    startCommand: python scraper_line.py
+    schedule: "*/15 * * * *"
