@@ -57,19 +57,25 @@ def get_items(url):
         "/usr/bin/google-chrome",
         "/usr/bin/chromium"
     ]
+    chrome_found = False
     for path in possible_paths:
-        if shutil.which(path):
+        if os.path.exists(path):
             options.binary_location = path
+            chrome_found = True
+            print(f"✅ Chrome 実行ファイル検出: {path}")
             break
-    else:
-        raise FileNotFoundError("Chrome 実行ファイルが見つかりません")
+
+    if not chrome_found:
+        raise FileNotFoundError("❌ Chrome 実行ファイルが見つかりません")
 
     # ✅ ChromeDriver起動
+    print("ChromeDriver 起動中...")
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager().install()),
         options=options
     )
 
+    print("ページにアクセス中:", url)
     driver.get(url)
     time.sleep(8)
 
@@ -95,6 +101,8 @@ def get_items(url):
             "price": price.get_text(strip=True) if price else "",
             "url": "https://www.2ndstreet.jp" + link.get("href")
         })
+
+    print(f"✅ {len(items)}件の商品を取得しました。")
     return items
 
 
@@ -116,15 +124,18 @@ def detect_new_items(new_items, old_items):
 
 
 if __name__ == "__main__":
-    print("スクレイピング開始...")
+    print("🚀 スクレイピング開始...")
     new_items = get_items(URL)
     old_items = load_previous_items()
     new_entries = detect_new_items(new_items, old_items)
 
     if new_entries:
-        print(f"新着 {len(new_entries)} 件を検出！LINE通知を送信します。")
-        message = "\n".join([f"{i['brand']} {i['name']}\n{i['price']}\n{i['url']}" for i in new_entries[:3]])
+        print(f"🎉 新着 {len(new_entries)} 件を検出！LINE通知を送信します。")
+        message = "\n".join([
+            f"{i['brand']} {i['name']}\n{i['price']}\n{i['url']}"
+            for i in new_entries[:3]
+        ])
         send_line_message(f"新着商品がありました！\n\n{message}")
         save_items(new_items)
     else:
-        print("新着商品はありません。")
+        print("🕊 新着商品はありません。")
