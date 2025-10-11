@@ -7,12 +7,14 @@ import requests
 import time
 import os
 import json
+import shutil  # Chrome実行ファイル検出用
 
 # --------------------------------------
 # LINE設定
 # --------------------------------------
 LINE_ACCESS_TOKEN = os.getenv("LINE_ACCESS_TOKEN", "48MZBofEnL2CTS8ciE1Z6Jb9bIs/Yt+SK/SJ4lTqh3J20ec2xH90MkdQ60+uvF+/RSaIuQQOaQVK0+YUOMcMTrsq5K/ILBPkX1vi9W0ZBOpJ556ZWlUeV2GW0zSCSdyZKLTwrtySzt8dXXWs62TzfQdB04t89/1O/w1cDnyilFU=")
 LINE_USER_ID = os.getenv("LINE_USER_ID", "U54af60e7c9fa2e22dab3b148b5188d8c")
+
 
 def send_line_message(message):
     """LINEに通知を送る関数"""
@@ -35,6 +37,7 @@ def send_line_message(message):
 URL = "https://www.2ndstreet.jp/search?keyword=%E3%83%95%E3%83%A9%E3%82%A4%E3%83%88%E3%82%B8%E3%83%A3%E3%82%B1%E3%83%83%E3%83%88&sortBy=arrival"
 DATA_FILE = "latest_items.json"
 
+
 def get_items(url):
     options = Options()
     options.add_argument("--headless")
@@ -48,8 +51,18 @@ def get_items(url):
         "Chrome/118.0.5993.118 Safari/537.36"
     )
 
-    # ✅ Render上でChromeの実行パスを指定（環境によっては /usr/bin/google-chrome になることもある）
-    options.binary_location = "/usr/bin/chromium"
+    # ✅ Render環境で存在するChromeパスを自動検出
+    possible_paths = [
+        "/usr/bin/chromium-browser",
+        "/usr/bin/google-chrome",
+        "/usr/bin/chromium"
+    ]
+    for path in possible_paths:
+        if shutil.which(path):
+            options.binary_location = path
+            break
+    else:
+        raise FileNotFoundError("Chrome 実行ファイルが見つかりません")
 
     # ✅ ChromeDriver起動
     driver = webdriver.Chrome(
@@ -62,7 +75,7 @@ def get_items(url):
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
 
-    # デバッグ保存（Renderログで内容を確認したい場合）
+    # デバッグ保存
     with open("debug.html", "w", encoding="utf-8") as f:
         f.write(soup.prettify())
 
