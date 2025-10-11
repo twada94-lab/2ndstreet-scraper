@@ -7,7 +7,6 @@ import requests
 import time
 import os
 import json
-import shutil  # Chrome実行ファイル検出用
 
 # --------------------------------------
 # LINE設定
@@ -51,22 +50,13 @@ def get_items(url):
         "Chrome/118.0.5993.118 Safari/537.36"
     )
 
-    # ✅ Render環境で存在するChromeパスを自動検出
-    possible_paths = [
-        "/usr/bin/chromium-browser",
-        "/usr/bin/google-chrome",
-        "/usr/bin/chromium"
-    ]
-    chrome_found = False
-    for path in possible_paths:
-        if os.path.exists(path):
-            options.binary_location = path
-            chrome_found = True
-            print(f"✅ Chrome 実行ファイル検出: {path}")
-            break
-
-    if not chrome_found:
+    # ✅ Render環境のChromeパスを環境変数から取得
+    chrome_path = os.getenv("CHROME_BIN")
+    if not chrome_path or not os.path.exists(chrome_path):
         raise FileNotFoundError("❌ Chrome 実行ファイルが見つかりません")
+
+    options.binary_location = chrome_path
+    print(f"✅ Chrome 実行ファイル: {chrome_path}")
 
     # ✅ ChromeDriver起動
     print("ChromeDriver 起動中...")
