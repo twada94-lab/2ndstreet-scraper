@@ -8,6 +8,7 @@ import time
 import os
 import json
 
+
 # --------------------------------------
 # LINE設定
 # --------------------------------------
@@ -52,6 +53,20 @@ def get_items(url):
 
     # ✅ Render環境のChromeパスを環境変数から取得
     chrome_path = os.getenv("CHROME_BIN")
+
+    # ⚠️ ← このifブロックがインデント間違っていたので修正
+    if not chrome_path or not os.path.exists(chrome_path):
+        possible_paths = [
+            "/usr/bin/google-chrome-stable",
+            "/usr/bin/google-chrome",
+            "/usr/bin/chromium-browser",
+            "/usr/bin/chromium"
+        ]
+        for path in possible_paths:
+            if os.path.exists(path):
+                chrome_path = path
+                break
+
     if not chrome_path or not os.path.exists(chrome_path):
         raise FileNotFoundError("❌ Chrome 実行ファイルが見つかりません")
 
