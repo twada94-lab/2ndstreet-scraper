@@ -1,146 +1,117 @@
+import os
+import json
+import time
+import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
-import requests
-import time
-import os
-import json
 
-
-# --------------------------------------
-# LINE設定
-# --------------------------------------
-LINE_ACCESS_TOKEN = os.getenv("LINE_ACCESS_TOKEN", "48MZBofEnL2CTS8ciE1Z6Jb9bIs/Yt+SK/SJ4lTqh3J20ec2xH90MkdQ60+uvF+/RSaIuQQOaQVK0+YUOMcMTrsq5K/ILBPkX1vi9W0ZBOpJ556ZWlUeV2GW0zSCSdyZKLTwrtySzt8dXXWs62TzfQdB04t89/1O/w1cDnyilFU=")
-LINE_USER_ID = os.getenv("LINE_USER_ID", "U54af60e7c9fa2e22dab3b148b5188d8c")
-
+# ----------------------------
+# LINE 設定
+# ----------------------------
+LINE_ACCESS_TOKEN = os.getenv("LINE_ACCESS_TOKEN", "")
+LINE_USER_ID = os.getenv("LINE_USER_ID", "")
 
 def send_line_message(message):
-    """LINEに通知を送る関数"""
     url = "https://api.line.me/v2/bot/message/push"
     headers = {
-        "Content-Type": "application/json; charset=UTF-8",
+        "Content-Type": "application/json",
         "Authorization": f"Bearer {LINE_ACCESS_TOKEN}"
     }
-    body = {
-        "to": LINE_USER_ID,
-        "messages": [{"type": "text", "text": message}]
-    }
-    res = requests.post(url, headers=headers, json=body)
-    print("LINE通知結果:", res.status_code, res.text)
+    data = {"to": LINE_USER_ID, "messages": [{"type": "text", "text": message}]}
+    requests.post(url, headers=headers, json=data)
 
 
-# --------------------------------------
-# スクレイピング設定
-# --------------------------------------
-URL = "https://www.2ndstreet.jp/search?keyword=%E3%83%95%E3%83%A9%E3%82%A4%E3%83%88%E3%82%B8%E3%83%A3%E3%82%B1%E3%83%83%E3%83%88&sortBy=arrival"
-DATA_FILE = "latest_items.json"
-
-
-def get_items(url):
+# ----------------------------
+# Chrome設定
+# ----------------------------
+def get_driver():
     options = Options()
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
-    options.add_argument(
-        "user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/118.0.5993.118 Safari/537.36"
-    )
 
-    # ✅ Render 環境の Chrome パスを環境変数から取得
-    # ✅ Chrome パス自動検出
-    chrome_path = os.getenv("CHROME_BIN")
-    if not chrome_path or not os.path.exists(chrome_path):
-        for path in [
-            "/usr/bin/google-chrome-stable",
-            "/usr/bin/google-chrome",
-            "/usr/bin/chromium-browser",
-            "/usr/bin/chromium"
-        ]:
+    chrome_path = os.getenv("CHROME_BIN", "/usr/bin/chromium-browser")
+    if not os.path.exists(chrome_path):
+        for path in ["/usr/bin/google-chrome", "/usr/bin/chromium"]:
             if os.path.exists(path):
                 chrome_path = path
                 break
-
-    if not chrome_path:
-        raise FileNotFoundError(f"❌ Chrome 実行ファイルが見つかりません: {chrome_path}")
-
-
     options.binary_location = chrome_path
-    print(f"✅ Chrome 実行ファイル: {chrome_path}")
 
-    print("ChromeDriver 起動中...")
-    driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager().install()),
-        options=options
-    )
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-    print("ページにアクセス中:", url)
+
+# ----------------------------
+# スクレイピング処理
+# ----------------------------
+def get_items(url):
+    driver = get_driver()
     driver.get(url)
     time.sleep(8)
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
-
-    # デバッグ保存
-    with open("debug.html", "w", encoding="utf-8") as f:
-        f.write(soup.prettify())
-
     driver.quit()
-    ...
-
 
     items = []
     for li in soup.select("ul.itemCardList li"):
-        brand = li.select_one(".itemCard_brand")
         name = li.select_one(".itemCard_name")
-        price = li.select_one(".itemCard_price")
         link = li.select_one("a[href^='/goods/detail/']")
         if not (name and link):
             continue
         items.append({
-            "brand": brand.get_text(strip=True) if brand else "",
             "name": name.get_text(strip=True),
-            "price": price.get_text(strip=True) if price else "",
             "url": "https://www.2ndstreet.jp" + link.get("href")
         })
-
-    print(f"✅ {len(items)}件の商品を取得しました。")
     return items
 
 
-def load_previous_items():
-    if not os.path.exists(DATA_FILE):
-        return []
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+# ----------------------------
+# 新着チェック
+# ----------------------------
+def load_previous(fav_name):
+    file = f"data_{fav_name}.json"
+    return json.load(open(file, "r", encoding="utf-8")) if os.path.exists(file) else []
 
-
-def save_items(items):
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
+def save_current(fav_name, items):
+    file = f"data_{fav_name}.json"
+    with open(file, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
 
+def detect_new(new, old):
+    old_urls = {i["url"] for i in old}
+    return [i for i in new if i["url"] not in old_urls]
 
-def detect_new_items(new_items, old_items):
-    old_urls = {item["url"] for item in old_items}
-    return [item for item in new_items if item["url"] not in old_urls]
 
-
+# ----------------------------
+# メイン処理
+# ----------------------------
 if __name__ == "__main__":
-    print("🚀 スクレイピング開始...")
-    new_items = get_items(URL)
-    old_items = load_previous_items()
-    new_entries = detect_new_items(new_items, old_items)
+    favorites = json.load(open("favorites.json", "r", encoding="utf-8"))
 
-    if new_entries:
-        print(f"🎉 新着 {len(new_entries)} 件を検出！LINE通知を送信します。")
-        message = "\n".join([
-            f"{i['brand']} {i['name']}\n{i['price']}\n{i['url']}"
-            for i in new_entries[:3]
-        ])
-        send_line_message(f"新着商品がありました！\n\n{message}")
-        save_items(new_items)
-    else:
-        print("🕊 新着商品はありません。")
+    for fav in favorites:
+        name = fav["name"]
+        url = fav["url"]
+        print(f"🔍 {name} をチェック中...")
+
+        new_items = get_items(url)
+        old_items = load_previous(name)
+        new_entries = detect_new(new_items, old_items)
+
+        if new_entries:
+            message = f"🎉 {name} に新着商品があります！\n\n"
+            message += "\n\n".join([
+                f"{item['name']}\n{item['url']}"
+                for item in new_entries[:5]
+            ])
+            send_line_message(message)
+            print(f"✅ {len(new_entries)} 件の新着を通知しました。")
+            save_current(name, new_items)
+        else:
+            print(f"🕊 {name} に新着なし。")
+
+    print("完了 ✅")
