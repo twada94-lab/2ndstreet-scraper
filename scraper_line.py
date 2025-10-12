@@ -24,38 +24,49 @@ def send_line_message(message):
         "Authorization": f"Bearer {LINE_ACCESS_TOKEN}"
     }
     data = {"to": LINE_USER_ID, "messages": [{"type": "text", "text": message}]}
-    requests.post(url, headers=headers, json=data)
+    res = requests.post(url, headers=headers, json=data)
+    print("📤 LINE送信:", res.status_code)
 
 
 # ----------------------------
-# Chrome設定
+# Chrome設定（Mac対応）
 # ----------------------------
 def get_driver():
     options = Options()
-    options.add_argument("--headless")
+    options.add_argument("--headless")  # 画面非表示
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
+    options.add_argument("--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                         "AppleWebKit/537.36 (KHTML, like Gecko) "
+                         "Chrome/128.0.0.0 Safari/537.36")
 
-    chrome_path = os.getenv("CHROME_BIN", "/usr/bin/chromium-browser")
-    if not os.path.exists(chrome_path):
-        for path in ["/usr/bin/google-chrome", "/usr/bin/chromium"]:
-            if os.path.exists(path):
-                chrome_path = path
-                break
-    options.binary_location = chrome_path
+    # macOS の Chrome 実行パス候補
+    possible_paths = [
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "/usr/bin/google-chrome",
+        "/usr/bin/chromium"
+    ]
 
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    chrome_path = next((p for p in possible_paths if os.path.exists(p)), None)
+    if chrome_path:
+        options.binary_location = chrome_path
+    else:
+        raise FileNotFoundError("Google Chrome が見つかりません。インストールしてください。")
+
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=options)
+    return driver
 
 
 # ----------------------------
-# スクレイピング処理
+# スクレイピング処理（Selenium）
 # ----------------------------
 def get_items(url):
     driver = get_driver()
     driver.get(url)
-    time.sleep(8)
+    time.sleep(8)  # ページが完全に読み込まれるのを待つ
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
     driver.quit()
@@ -70,6 +81,7 @@ def get_items(url):
             "name": name.get_text(strip=True),
             "url": "https://www.2ndstreet.jp" + link.get("href")
         })
+
     print(f"✅ {len(items)} 件取得: {url}")
     return items
 
@@ -104,11 +116,11 @@ if __name__ == "__main__":
                 message_lines.append(f"{item['name']}\n{item['url']}")
             message_lines.append("")  # 区切り
 
-    # 結果を保存（最新だけ）
+    # 最新データを保存
     with open("latest_items.json", "w", encoding="utf-8") as f:
         json.dump(latest_items, f, ensure_ascii=False, indent=2)
 
-    # 通知まとめ
+    # LINE通知
     if message_lines:
         send_line_message("\n".join(message_lines))
         print("✅ 新着を通知しました。")
