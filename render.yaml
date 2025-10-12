@@ -11,6 +11,7 @@ services:
       pip install -r requirements.txt
 
     startCommand: |
+      export PATH="${PATH}:/opt/render/project/.render/chrome/opt/google/chrome"
       export CHROME_BIN=$(which chromium-browser || which google-chrome || which chromium)
       echo "✅ CHROME_BIN=$CHROME_BIN"
       python main.py
