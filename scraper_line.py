@@ -52,8 +52,15 @@ def get_items(url):
     )
 
     # ✅ Render 環境の Chrome パスを環境変数から取得
+    # ✅ Chrome パス自動検出
     chrome_path = os.getenv("CHROME_BIN")
     if not chrome_path or not os.path.exists(chrome_path):
+        for path in ["/usr/bin/chromium-browser", "/usr/bin/google-chrome", "/usr/bin/chromium"]:
+            if os.path.exists(path):
+                chrome_path = path
+                break
+
+    if not chrome_path:
         raise FileNotFoundError(f"❌ Chrome 実行ファイルが見つかりません: {chrome_path}")
 
     options.binary_location = chrome_path
