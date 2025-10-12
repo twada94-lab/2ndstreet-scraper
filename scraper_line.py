@@ -15,12 +15,13 @@ LINE_ACCESS_TOKEN = os.getenv("LINE_ACCESS_TOKEN", "")
 LINE_USER_ID = os.getenv("LINE_USER_ID", "")
 
 def send_line_message(message):
+    """LINEメッセージ送信"""
     url = "https://api.line.me/v2/bot/message/push"
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {LINE_ACCESS_TOKEN}"
     }
-    data = {"to": LINE_USER_ID, "messages": [{"type": "text", "text": message}]}
+    data = {"to": LINE_USER_ID, "messages": [{"type": "text", "text": message[:4900]}]}  # LINE上限対策
     requests.post(url, headers=headers, json=data)
 
 
@@ -50,10 +51,10 @@ def get_driver():
 # スクレイピング処理
 # ----------------------------
 def get_items(url):
+    """URLから商品一覧を取得"""
     driver = get_driver()
     driver.get(url)
     time.sleep(8)
-
     soup = BeautifulSoup(driver.page_source, "html.parser")
     driver.quit()
 
@@ -71,7 +72,7 @@ def get_items(url):
 
 
 # ----------------------------
-# 新着チェック
+# JSON管理
 # ----------------------------
 def load_previous(fav_name):
     file = f"data_{fav_name}.json"
@@ -92,6 +93,7 @@ def detect_new(new, old):
 # ----------------------------
 if __name__ == "__main__":
     favorites = json.load(open("favorites.json", "r", encoding="utf-8"))
+    overall_message = ""
 
     for fav in favorites:
         name = fav["name"]
@@ -103,15 +105,23 @@ if __name__ == "__main__":
         new_entries = detect_new(new_items, old_items)
 
         if new_entries:
-            message = f"🎉 {name} に新着商品があります！\n\n"
-            message += "\n\n".join([
+            part_message = f"🎉 {name} に新着商品があります！\n\n"
+            part_message += "\n\n".join([
                 f"{item['name']}\n{item['url']}"
-                for item in new_entries[:5]
+                for item in new_entries[:10]
             ])
-            send_line_message(message)
-            print(f"✅ {len(new_entries)} 件の新着を通知しました。")
+            part_message += "\n" + "-"*30 + "\n"
+            overall_message += part_message
             save_current(name, new_items)
+            print(f"✅ {len(new_entries)} 件の新着を検出。")
         else:
             print(f"🕊 {name} に新着なし。")
+
+    # まとめてLINE通知
+    if overall_message:
+        send_line_message(overall_message.strip())
+        print("📨 全お気に入りの新着をまとめて通知しました。")
+    else:
+        print("🕊 全てのお気に入りに新着なし。")
 
     print("完了 ✅")
