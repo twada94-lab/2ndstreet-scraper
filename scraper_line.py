@@ -24,81 +24,98 @@ def send_line_message(message):
         "Authorization": f"Bearer {LINE_ACCESS_TOKEN}"
     }
     data = {"to": LINE_USER_ID, "messages": [{"type": "text", "text": message}]}
-    res = requests.post(url, headers=headers, json=data)
-    print("📤 LINE送信:", res.status_code)
+    try:
+        res = requests.post(url, headers=headers, json=data)
+        print("📤 LINE送信:", res.status_code)
+    except Exception as e:
+        print("❌ LINE送信エラー:", e)
 
 
 # ----------------------------
-# Chrome設定（Mac対応）
+# Chrome設定（Mac・Linux両対応）
 # ----------------------------
 def get_driver():
     options = Options()
-    options.add_argument("--headless")  # 画面非表示
+    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
-    options.add_argument("--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                         "AppleWebKit/537.36 (KHTML, like Gecko) "
-                         "Chrome/128.0.0.0 Safari/537.36")
+    options.add_argument(
+        "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+    )
 
-    # macOS の Chrome 実行パス候補
+    # 環境依存パスの探索
     possible_paths = [
-        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        os.getenv("CHROME_BIN", ""),  # GitHub Actions用
         "/usr/bin/google-chrome",
-        "/usr/bin/chromium"
+        "/usr/bin/chromium",
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",  # mac用
     ]
 
-    chrome_path = next((p for p in possible_paths if os.path.exists(p)), None)
+    chrome_path = next((p for p in possible_paths if p and os.path.exists(p)), None)
     if chrome_path:
         options.binary_location = chrome_path
     else:
-        raise FileNotFoundError("Google Chrome が見つかりません。インストールしてください。")
+        print("⚠️ Chrome 実行ファイルが見つかりません。")
+        raise FileNotFoundError("Chrome executable not found. Please install Google Chrome.")
 
     service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-    return driver
+    return webdriver.Chrome(service=service, options=options)
 
 
 # ----------------------------
 # スクレイピング処理（Selenium）
 # ----------------------------
 def get_items(url):
-    driver = get_driver()
-    driver.get(url)
-    time.sleep(8)  # ページが完全に読み込まれるのを待つ
+    try:
+        driver = get_driver()
+        driver.get(url)
+        time.sleep(8)
 
-    soup = BeautifulSoup(driver.page_source, "html.parser")
-    driver.quit()
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+        driver.quit()
 
-    items = []
-    for li in soup.select("ul.itemCardList li"):
-        name = li.select_one(".itemCard_name")
-        link = li.select_one("a[href^='/goods/detail/']")
-        if not (name and link):
-            continue
-        items.append({
-            "name": name.get_text(strip=True),
-            "url": "https://www.2ndstreet.jp" + link.get("href")
-        })
+        items = []
+        for li in soup.select("ul.itemCardList li"):
+            name = li.select_one(".itemCard_name")
+            link = li.select_one("a[href^='/goods/detail/']")
+            if not (name and link):
+                continue
+            items.append({
+                "name": name.get_text(strip=True),
+                "url": "https://www.2ndstreet.jp" + link.get("href")
+            })
 
-    print(f"✅ {len(items)} 件取得: {url}")
-    return items
+        print(f"✅ {len(items)} 件取得: {url}")
+        return items
+    except Exception as e:
+        print("❌ スクレイピング失敗:", e)
+        return []
 
 
 # ----------------------------
 # メイン処理
 # ----------------------------
 if __name__ == "__main__":
+    # お気に入り条件の読み込み
     favorites = json.load(open("favorites.json", "r", encoding="utf-8"))
     latest_items = {}
     message_lines = []
 
+    # 前回データの安全な読み込み
     if os.path.exists("latest_items.json"):
-        old_data = json.load(open("latest_items.json", "r", encoding="utf-8"))
+        try:
+            old_data = json.load(open("latest_items.json", "r", encoding="utf-8"))
+            if not isinstance(old_data, dict):
+                old_data = {}
+        except Exception:
+            old_data = {}
     else:
         old_data = {}
 
+    # 各お気に入り条件をチェック
     for fav in favorites:
         name = fav["name"]
         url = fav["url"]
@@ -116,11 +133,11 @@ if __name__ == "__main__":
                 message_lines.append(f"{item['name']}\n{item['url']}")
             message_lines.append("")  # 区切り
 
-    # 最新データを保存
+    # 結果を保存（最新のみ）
     with open("latest_items.json", "w", encoding="utf-8") as f:
         json.dump(latest_items, f, ensure_ascii=False, indent=2)
 
-    # LINE通知
+    # 通知
     if message_lines:
         send_line_message("\n".join(message_lines))
         print("✅ 新着を通知しました。")
