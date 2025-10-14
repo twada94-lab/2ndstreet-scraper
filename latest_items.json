@@ -727,6 +727,10 @@
   ],
   "レザージャケット": [
     {
+      "name": "レザージャケット・ブルゾン",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328975134628/shopsId/30904"
+    },
+    {
       "name": "レザージャケット・ブルゾン/L/羊革/BLK/無地/20-011-600-2080-3-0",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339875080458/shopsId/31316"
     },
@@ -961,13 +965,13 @@
     {
       "name": "90s/ZIP LEATHER JACKET/レザージャケット・ブルゾン/L/羊革/BRW/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319572848261/shopsId/30448"
-    },
-    {
-      "name": "レザージャケット・ブルゾン/40/スウェード/BRW/無地/50~60S",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340883475549/shopsId/31370"
     }
   ],
   "古着": [
+    {
+      "name": "ダウンジャケット/S/ウール/NVY",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320725876048/shopsId/30743"
+    },
     {
       "name": "ジャケット/LL/コットン/BRW/JR-RL-NA0813",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339875079902/shopsId/31316"
@@ -1203,10 +1207,6 @@
     {
       "name": "スーパードライテックレインジャケット/L/ナイロン/ボルドー×レッド/1128705",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338564582440/shopsId/31263"
-    },
-    {
-      "name": "FULL SWING ARMSTRONG JACKET/ダックジャケット/L/コットン/CML/DJ3370-M",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337741856152/shopsId/31211"
     }
   ]
 }
