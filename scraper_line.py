@@ -14,18 +14,56 @@ from bs4 import BeautifulSoup
 LINE_ACCESS_TOKEN = os.getenv("LINE_ACCESS_TOKEN", "")
 LINE_USER_ID = os.getenv("LINE_USER_ID", "")
 
-def send_line_message(message):
+def send_line_message(message, max_retries=3):
+    """
+    LINE通知を送信する（429エラー時にはリトライ処理を実行）
+    """
     if not LINE_ACCESS_TOKEN or not LINE_USER_ID:
         print("⚠️ LINEのトークンまたはユーザーIDが設定されていません")
         return
+    
     url = "https://api.line.me/v2/bot/message/push"
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {LINE_ACCESS_TOKEN}"
     }
-    data = {"to": LINE_USER_ID, "messages": [{"type": "text", "text": message}]}
-    res = requests.post(url, headers=headers, json=data)
-    print("📤 LINE送信:", res.status_code)
+    
+    # LINEの1メッセージは最大2000文字。それを超える場合は分割
+    if len(message) > 2000:
+        messages = [message[i:i + 2000] for i in range(0, len(message), 2000)]
+    else:
+        messages = [message]
+
+    # メッセージごとの送信処理
+    for msg in messages:
+        data = {"to": LINE_USER_ID, "messages": [{"type": "text", "text": msg}]}
+        
+        for attempt in range(max_retries):
+            res = requests.post(url, headers=headers, json=data)
+            status_code = res.status_code
+            print(f"📤 LINE送信 (試行 {attempt + 1}/{max_retries}): {status_code}")
+            
+            if status_code == 200:
+                # 成功
+                break
+            elif status_code == 429:
+                # 429 Too Many Requests の場合
+                # 待機時間を長くして再試行
+                wait_time = 5 * (attempt + 1)
+                print(f"🚨 429 Too Many Requests. {wait_time}秒待機して再試行します...")
+                time.sleep(wait_time)
+            elif status_code in (400, 401, 403):
+                # 致命的なエラー（認証失敗、不正なリクエストなど）
+                print(f"❌ 致命的なエラー {status_code}。再試行を中止します。レスポンス: {res.text}")
+                break
+            else:
+                # その他のエラー（500系など）
+                wait_time = 2 * (attempt + 1)
+                print(f"⚠️ エラー {status_code}。{wait_time}秒待機して再試行します。")
+                time.sleep(wait_time)
+        else:
+            # max_retries回試行しても成功しなかった場合
+            print(f"💥 LINE通知が {max_retries} 回失敗しました。処理をスキップします。")
 
 
 # ----------------------------
@@ -42,6 +80,7 @@ def get_driver():
                          "AppleWebKit/537.36 (KHTML, like Gecko) "
                          "Chrome/128.0.0.0 Safari/537.36")
 
+    # 既存のChromeパス検索ロジックは維持
     possible_paths = [
         "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
         "/usr/bin/google-chrome",
@@ -51,8 +90,9 @@ def get_driver():
     if chrome_path:
         options.binary_location = chrome_path
     else:
-        raise FileNotFoundError("Google Chrome が見つかりません。インストールしてください。")
-
+        # ChromeDriverManagerを使用してWebDriverを自動でダウンロード・設定
+        return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    
     return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 
@@ -111,14 +151,9 @@ if __name__ == "__main__":
 
         if new_entries:
             count = len(new_entries)
-            if count > 10:  # ← ★ここが閾値（必要に応じて変更可能）
-                message_lines.append(f"🎉 {name} に新着商品が {count} 件あります！")
-                message_lines.append(f"👉 {url}")  # 検索ページへのリンク
-            else:
-                message_lines.append(f"🎉 {name} に新着商品があります！")
-                for item in new_entries:
-                    message_lines.append(f"{item['name']}\n{item['url']}")
-            message_lines.append("")  # 区切り
+            # ★ 変更点: 新着件数とカテゴリ名のみをメッセージに追加
+            message_lines.append(f"🎉 新着あり！【{name}】に {count} 件の新着商品があります。")
+            message_lines.append("") # 区切り
 
     # 最新データを保存
     with open("latest_items.json", "w", encoding="utf-8") as f:
@@ -126,7 +161,9 @@ if __name__ == "__main__":
 
     # LINE通知
     if message_lines:
-        send_line_message("\n".join(message_lines))
+        # メッセージをまとめて通知
+        final_message = "--- 新着通知 ---\n" + "\n".join(message_lines).strip()
+        send_line_message(final_message)
         print("✅ 新着を通知しました。")
     else:
         print("🕊 新着なし。")
