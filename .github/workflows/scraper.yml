@@ -1,42 +1,10 @@
-name: Run 2ndStreet Scraper every 15 minutes
-
-on:
-  schedule:
-    - cron: "*/15 * * * *"
-  workflow_dispatch:
-
-jobs:
-  run:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run scraper
+- name: Run scraper
         env:
-          LINE_ACCESS_TOKEN: ${{ secrets.LINE_ACCESS_TOKEN }}
-          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+          # シークレットの名前を DISCORD_WEBHOOK_URL に変更した場合
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }} 
+          # LINE関連の環境変数は削除するか、値を空にします
+          LINE_ACCESS_TOKEN: "" 
+          LINE_USER_ID: "" 
           CHROME_BIN: /usr/bin/chromium-browser
         run: |
           python scraper_line.py
-
-      - name: Commit latest data
-        run: |
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "github-actions"
-          git add latest_items.json
-          git diff --cached --quiet || git commit -m "Update latest_items.json [bot]"
-          git push
