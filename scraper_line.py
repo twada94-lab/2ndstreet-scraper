@@ -120,4 +120,33 @@ if __name__ == "__main__":
             print("⚠️ latest_items.json が壊れていたため初期化します。")
             old_data = {}
 
-    for
+    for fav in favorites:
+        name = fav["name"]
+        url = fav["url"]
+        print(f"🔍 {name} をチェック中...")
+
+        new_items = get_items(url)
+        latest_items[name] = new_items
+
+        old_urls = {i["url"] for i in old_data.get(name, [])}
+        new_entries = [i for i in new_items if i["url"] not in old_urls]
+
+        if new_entries:
+            count = len(new_entries)
+            # 新着件数とカテゴリ名のみをメッセージに追加（URLは含めない）
+            message_lines.append(f"🎉 新着あり！【{name}】に {count} 件の新着商品があります。")
+            message_lines.append("") # 区切り
+
+    # 最新データを保存
+    with open("latest_items.json", "w", encoding="utf-8") as f:
+        json.dump(latest_items, f, ensure_ascii=False, indent=2)
+
+    # Discord通知
+    if message_lines:
+        final_message = "--- 2ndStreet 新着通知 ---\n" + "\n".join(message_lines).strip()
+        send_discord_message(final_message) 
+        print("✅ 新着を通知しました。")
+    else:
+        print("🕊 新着なし。")
+
+    print("完了 ✅")
