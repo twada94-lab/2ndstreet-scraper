@@ -243,20 +243,12 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/42/--/BRW/無地/B-3",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335644013924/shopsId/31131"
-    },
-    {
       "name": "フライトジャケット/M/ナイロン/KHK/MIL-J-0031",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342573841795/shopsId/31469"
     },
     {
       "name": "N-3B/フライトジャケット/XXL/ナイロン/KHK/6182220",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337044916157/shopsId/31186"
-    },
-    {
-      "name": "GOAT G-1 TOP GUN/フライトジャケット/46/山羊革/BRW/6101063",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337044916164/shopsId/31186"
     },
     {
       "name": "フライトジャケット/L/コットン/KHK",
@@ -481,6 +473,14 @@
     {
       "name": "フライトジャケット/M/ナイロン/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319376967236/shopsId/30311"
+    },
+    {
+      "name": "N-2B/フライトジャケット/--/--/KHK/8415-00-118-7587",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347600444413/shopsId/31903"
+    },
+    {
+      "name": "フライトジャケット/M/羊革/BRW/無地/B-3/2571-5322",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337133966834/shopsId/31190"
     }
   ],
   "ミリタリー": [
@@ -1033,10 +1033,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332474492738/shopsId/30958"
     },
     {
-      "name": "ダウンジャケット/XL/ナイロン/NVY/1101501",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338163426664/shopsId/31238"
-    },
-    {
       "name": "スウェット/L/コットン/BEG",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348960048297/shopsId/32025"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ダウンジャケット/LL/ポリエステル/BLK/無地/JR-RL-IA3654",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343026539580/shopsId/31514"
+    },
+    {
+      "name": "フリースジャケット/XS/ポリエステル/BEG/23056",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333864171165/shopsId/31017"
     }
   ]
 }
