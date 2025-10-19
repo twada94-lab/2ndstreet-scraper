@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/M/ポリエステル/NVY/無地/0615-00-573-8335",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343685991514/shopsId/31564"
-    },
-    {
       "name": "フライトジャケット/XL/ポリエステル/BLK/6192170",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327494390782/shopsId/30883"
     },
@@ -481,6 +477,10 @@
     {
       "name": "フライトジャケット/46/コットン/WHT/A12BL041",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347990005522/shopsId/31549"
+    },
+    {
+      "name": "フライトジャケット/S/ナイロン/KHK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340712007972/shopsId/31360"
     }
   ],
   "ミリタリー": [
@@ -1009,14 +1009,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343603038659/shopsId/31563"
     },
     {
-      "name": "テーラードジャケット/--/ウール/NVY",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342943848898/shopsId/31503"
-    },
-    {
-      "name": "スペリオダウンパーカ/XL/ナイロン/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342307353945/shopsId/31446"
-    },
-    {
       "name": "ブルゾン/100cm/ポリエステル/RED/RN51884",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341242782797/shopsId/31392"
     },
@@ -1207,6 +1199,14 @@
     {
       "name": "スウェット/M/ポリエステル/BLK/39543FA20",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2241722895446/shopsId/31415"
+    },
+    {
+      "name": "フリースジャケット/S/ポリエステル/GRY/25580FA19",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2241722895491/shopsId/31415"
+    },
+    {
+      "name": "フリースジャケット/L/ポリエステル/GRN/23056",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338943111254/shopsId/31281"
     }
   ]
 }
