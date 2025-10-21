@@ -251,20 +251,12 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338463457580/shopsId/31261"
     },
     {
-      "name": "フライトジャケット/M/コットン/IDG/BM10087",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334827849480/shopsId/31075"
-    },
-    {
       "name": "フライトジャケット/L/レザー/BLK/ZIP歯飛び有",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329989694054/shopsId/30939"
     },
     {
       "name": "A-2/フライトジャケット/XL/羊革/BRW/3145",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329989728742/shopsId/30939"
-    },
-    {
-      "name": "フライトジャケット/L/羊革/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338725929176/shopsId/31266"
     },
     {
       "name": "N-3B/フライトジャケット/M/ナイロン/KHK/無地/DLA615-457-6500",
@@ -481,13 +473,17 @@
     {
       "name": "90s/MA-1/フライトジャケット/XL/ポリエステル/カーキ",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328642961212/shopsId/30902"
+    },
+    {
+      "name": "MA-1/ワッペン/ヤケ有/フライトジャケット/M/ナイロン/KHK/0615-00-573-8335",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334735497827/shopsId/31068"
+    },
+    {
+      "name": "フライトジャケット/M/ナイロン/BLK/無地/6172027/ダウンコート",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343443894040/shopsId/31545"
     }
   ],
   "ミリタリー": [
-    {
-      "name": "ミリタリージャケット/S/ナイロン/KHK/無地",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340582328177/shopsId/31351"
-    },
     {
       "name": "N-2B/ミリタリージャケット/--/ナイロン/GRN/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338316151269/shopsId/31248"
@@ -723,6 +719,10 @@
     {
       "name": "U.T.A.H/ミリタリーパンツ/ボトム/35/コットン/KHK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319955588371/shopsId/30605"
+    },
+    {
+      "name": "CIVIATELIER/ミリタリージャケット/XL/コットン/GRN/カモフラ/リメイク/JORDAN",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2330074227415/shopsId/30948"
     }
   ],
   "レザージャケット": [
@@ -761,10 +761,6 @@
     {
       "name": "70s/レザージャケット・ブルゾン/40/レザー/BRW/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2325783694108/shopsId/30852"
-    },
-    {
-      "name": "レザージャケット・ブルゾン/L/牛革/BLK/無地/443919",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2325783694122/shopsId/30852"
     },
     {
       "name": "J-100型/レザージャケット・ブルゾン/L/牛革/BRW/40359",
@@ -857,10 +853,6 @@
     {
       "name": "JOURNAL STANDARD別注/TYPE III/スエードトラッカージャケット/L/BRW",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327172559500/shopsId/30875"
-    },
-    {
-      "name": "80～90s/OLD GAP/レザージャケット・ブルゾン/L/レザー/BLK/112915-00-1",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327172560629/shopsId/30875"
     },
     {
       "name": "TYPEⅡ TRUCKER LEATHER JACKET/レザージャケット・ブルゾン/M/レザー/BLK",
@@ -965,6 +957,14 @@
     {
       "name": "レザージャケット・ブルゾン/9/羊革/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327844614872/shopsId/30887"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/S/レザー/BLK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327844614889/shopsId/30887"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/48/レザー/BEG",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320685669025/shopsId/30739"
     }
   ],
   "古着": [
