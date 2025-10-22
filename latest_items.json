@@ -557,10 +557,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2345041346570/shopsId/31685"
     },
     {
-      "name": "ミリタリージャケット/M/--/KHK/8415-00-310-1126",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2345140086094/shopsId/31468"
-    },
-    {
       "name": "ストレートパンツ/--/コットン/KHK/無地/8405-99-977-0506",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341031771117/shopsId/31380"
     },
@@ -723,6 +719,10 @@
     {
       "name": "カーゴパンツ/オーストリア軍/ピードットカモ/--/コットン/BRW/ブラウン/カモフラ",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335501870370/shopsId/31122"
+    },
+    {
+      "name": "ECWCS/ミリタリージャケット/M/--/KHK/カモフラ/デジカモ",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332832455177/shopsId/30971"
     }
   ],
   "レザージャケット": [
@@ -777,10 +777,6 @@
     {
       "name": "レザージャケット・ブルゾン/--/レザー/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337573089889/shopsId/31203"
-    },
-    {
-      "name": "レザージャケット・ブルゾン/--/レザー/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337573089919/shopsId/31203"
     },
     {
       "name": "レザージャケット・ブルゾン/M/--/BRW/TREVOR",
@@ -965,6 +961,10 @@
     {
       "name": "レザージャケット・ブルゾン/--/レザー/BLK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342276976602/shopsId/31445"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/L/レザー/BRW",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339937657543/shopsId/31318"
     }
   ],
   "古着": [
