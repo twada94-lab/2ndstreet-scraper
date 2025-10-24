@@ -589,10 +589,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341031774804/shopsId/31380"
     },
     {
-      "name": "ミリタリージャケット/M/コットン/KHK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341607128611/shopsId/31408"
-    },
-    {
       "name": "コート/--/コットン/KHK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341031774774/shopsId/31380"
     },
@@ -723,6 +719,10 @@
     {
       "name": "ミリタリージャケット/--/--/KHK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348630200833/shopsId/31995"
+    },
+    {
+      "name": "カーゴパンツ/--/コットン/KHK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333765632703/shopsId/31010"
     }
   ],
   "レザージャケット": [
@@ -1081,10 +1081,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340653995840/shopsId/31356"
     },
     {
-      "name": "ダウンジャケット/L/ナイロン/BLK/無地/0200012831",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328565962280/shopsId/30900"
-    },
-    {
       "name": "フリースジャケット/S/ポリエステル/CRM/無地/STY22810FA18",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328565968633/shopsId/30900"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "トートバッグ/キャンバス/BLU",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334735599118/shopsId/31068"
+    },
+    {
+      "name": "リラックスフィットサティーンカーゴパンツ/32/コットン/KHK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2324665021254/shopsId/30823"
     }
   ]
 }
