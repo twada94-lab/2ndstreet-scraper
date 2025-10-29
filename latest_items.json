@@ -727,10 +727,6 @@
   ],
   "レザージャケット": [
     {
-      "name": "A-2/レザージャケット・ブルゾン/--/レザー/BRW/無地",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337023926344/shopsId/31185"
-    },
-    {
       "name": "PUレザー/レザージャケット・ブルゾン/L/フェイクレザー/BLK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337023962977/shopsId/31185"
     },
@@ -965,9 +961,17 @@
     {
       "name": "レザージャケット・ブルゾン/1/レザー/BLK/406352002",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341736051842/shopsId/31417"
+    },
+    {
+      "name": "MILANO CONNECTION/レザージャケット・ブルゾン/M/羊革/BLK/無地/M1105",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339937706678/shopsId/31318"
     }
   ],
   "古着": [
+    {
+      "name": "フリースジャケット/S/ナイロン/GRN/無地",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334383945770/shopsId/31045"
+    },
     {
       "name": "ジャケット/S/ポリエステル/CRM/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343572637655/shopsId/31557"
@@ -1203,10 +1207,6 @@
     {
       "name": "PENROD PANT/ボトム/32/コットン/BLU/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334296630930/shopsId/31037"
-    },
-    {
-      "name": "ベスト/M/コットン/BRW/無地",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334296642315/shopsId/31037"
     }
   ]
 }
