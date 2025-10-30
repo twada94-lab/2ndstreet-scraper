@@ -243,24 +243,12 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/XL/ナイロン/GRN/00SWF2-W-BURKISK-0GAVS",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337622771888/shopsId/31206"
-    },
-    {
       "name": "フライトジャケット/XS/--/BRW/24008423/B-3/羊ムートン",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340836434258/shopsId/31203"
     },
     {
       "name": "フライトジャケット/S/ナイロン/GRY/N-3B",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337555228039/shopsId/31202"
-    },
-    {
-      "name": "フライトジャケット/36/羊革",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334315873386/shopsId/31038"
-    },
-    {
-      "name": "フライトジャケット/L/ナイロン/NVY//",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329956345651/shopsId/30941"
     },
     {
       "name": "フライトジャケット/--/コットン/55-J-120",
@@ -481,6 +469,18 @@
     {
       "name": "CROWS/フライトジャケット/S/コーデュロイ/YLW/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320853376632/shopsId/30764"
+    },
+    {
+      "name": "フライトジャケット/S/ナイロン/KHK/CWU45P",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320135372895/shopsId/30625"
+    },
+    {
+      "name": "フライトジャケット/S/ナイロン/グリーン/カモフラ/J-82790J",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320135313072/shopsId/30625"
+    },
+    {
+      "name": "フライトジャケット/--/ポリエステル/BLK/無地/3172040",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319763694769/shopsId/30574"
     }
   ],
   "ミリタリー": [
@@ -727,10 +727,6 @@
   ],
   "レザージャケット": [
     {
-      "name": "レザージャケット・ブルゾン/--/--/BRW",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2345041325759/shopsId/31685"
-    },
-    {
       "name": "レザージャケット・ブルゾン/36/レザー/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2345041325766/shopsId/31685"
     },
@@ -805,10 +801,6 @@
     {
       "name": "レザージャケット・ブルゾン/L/羊革/BLK/07-31LK01",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320263008826/shopsId/30690"
-    },
-    {
-      "name": "NUOVA/レザージャケット・ブルゾン/2L/羊革/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320263031794/shopsId/30690"
     },
     {
       "name": "レザージャケット・ブルゾン/40/馬革/BLK/06-6977-1373",
@@ -965,6 +957,14 @@
     {
       "name": "レザージャケット・ブルゾン/--/レザー/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334724956601/shopsId/31067"
+    },
+    {
+      "name": "Beaux/レザージャケット・ブルゾン/48/羊革/BLK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2344130218736/shopsId/31748"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/4/山羊革/BLK/240724J",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319204945160/shopsId/30242"
     }
   ],
   "古着": [
