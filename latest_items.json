@@ -493,10 +493,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319553229584/shopsId/30436"
     },
     {
-      "name": "ミリタリージャケット/M/コットン/KHK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319045198671/shopsId/30032"
-    },
-    {
       "name": "ミリタリージャケット/48/コットン/GRN/無地/80350010010",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319045175467/shopsId/30032"
     },
@@ -603,10 +599,6 @@
     {
       "name": "シャツ/40/--/WHT/グランパシャツ",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339094595887/shopsId/31287"
-    },
-    {
-      "name": "ミリタリージャケット/--/コットン/GRN",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336462287139/shopsId/31162"
     },
     {
       "name": "ミリタリージャケット/--/--/GRN/T.C.31.1321.11-1961",
@@ -723,6 +715,14 @@
     {
       "name": "ミリタリージャケット/M/ポリエステル/KHK/カモフラ",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342869092481/shopsId/31488"
+    },
+    {
+      "name": "ミリタリージャケット/L/コットン/NVY/無地/8415-01-099-7842",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341073196251/shopsId/31384"
+    },
+    {
+      "name": "ボトム/31/コットン/KHK/無地/8405-231-7203",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337652577559/shopsId/31209"
     }
   ],
   "レザージャケット": [
@@ -907,10 +907,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334114545545/shopsId/31029"
     },
     {
-      "name": "レザージャケット・ブルゾン/40/羊革/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340836688651/shopsId/31013"
-    },
-    {
       "name": "レザージャケット・ブルゾン/S/羊革/NVY/114-30-0009",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2331153899431/shopsId/30954"
     },
@@ -965,6 +961,10 @@
     {
       "name": "レザージャケット・ブルゾン/48/レザー/CML",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328075879139/shopsId/30890"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/L/牛革/BRW",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328075879146/shopsId/30890"
     }
   ],
   "古着": [
