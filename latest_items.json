@@ -295,7 +295,7 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340375652328/shopsId/31337"
     },
     {
-      "name": "フライトジャケット/L/--/KHK/MIL-J-82790J",
+      "name": "MA-1/USA製/フライトジャケット/L/--/KHK/MIL-J-82790J",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334828069726/shopsId/31075"
     },
     {
@@ -459,10 +459,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340793378381/shopsId/31363"
     },
     {
-      "name": "フライトジャケット/L/--/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347160317813/shopsId/31861"
-    },
-    {
       "name": "フライトジャケット/L/コットン/BLK/無地/ACBLC1123001",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343181940948/shopsId/31516"
     },
@@ -481,6 +477,10 @@
     {
       "name": "フライトジャケット/M/ナイロン/KHK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318943606899/shopsId/02459"
+    },
+    {
+      "name": "フライトジャケット/XL/ナイロン/BRD",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2241722967129/shopsId/31415"
     }
   ],
   "ミリタリー": [
@@ -513,7 +513,7 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343603102145/shopsId/31563"
     },
     {
-      "name": "バトルドレストラウザー/50s/ウール/KHK/無地",
+      "name": "バトルドレストラウザー/50s/ウール/カーキ/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337592146198/shopsId/31207"
     },
     {
@@ -561,7 +561,7 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340375652328/shopsId/31337"
     },
     {
-      "name": "ミリタリージャケット/--/ナイロン/BLK/無地",
+      "name": "トゥルースペック/ミリタリージャケット/--/ナイロン/ブラック/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332463614615/shopsId/30956"
     },
     {
@@ -969,11 +969,39 @@
   ],
   "古着": [
     {
-      "name": "Tシャツ/XL/コットン/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343603091708/shopsId/31563"
+      "name": "ダウンジャケット/XS/ポリエステル/BLK/01 0353",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338803339583/shopsId/31275"
     },
     {
-      "name": "ダウンベスト/L/ポリエステル/KHK/ペーズリー/I032265",
+      "name": "Ready Freddy Hoody/ブルゾン/XXL/ポリエステル/WHT/68095FA24",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338803341234/shopsId/31275"
+    },
+    {
+      "name": "オーバーオール/--/--/IDG",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338803136243/shopsId/31275"
+    },
+    {
+      "name": "カーディガン(厚手)/M/ナイロン/NVY/総柄",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320514413850/shopsId/30718"
+    },
+    {
+      "name": "ダウンベスト/S/ポリエステル/BLK/84622FA18",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320514413928/shopsId/30718"
+    },
+    {
+      "name": "ショートパンツ/XL/ナイロン/ORN/57021SP19",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320514413966/shopsId/30718"
+    },
+    {
+      "name": "ショートパンツ/L/ナイロン/PNK/57021SP20",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320514413980/shopsId/30718"
+    },
+    {
+      "name": "ジャケット/--/コットン/KHK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320514431878/shopsId/30718"
+    },
+    {
+      "name": "Springfield Vest/ダウンベスト/L/ポリエステル/KHK/ペーズリー/I032265",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343602214733/shopsId/31563"
     },
     {
@@ -1179,34 +1207,6 @@
     {
       "name": "SNOWSHOT PANTS/32/ナイロン/BLK/無地/8",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337321707836/shopsId/31195"
-    },
-    {
-      "name": "フリースジャケット/M/ポリエステル/GRY",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337503263280/shopsId/31198"
-    },
-    {
-      "name": "ダウンベスト/S/ポリエステル/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348490539609/shopsId/31980"
-    },
-    {
-      "name": "ストレートパンツ/32/デニム/B17 STW",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318785188546/shopsId/01830"
-    },
-    {
-      "name": "Tシャツ/M/コットン/WHT",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319204966585/shopsId/30242"
-    },
-    {
-      "name": "ハイカットスニーカー/23cm/GRY/1sd176",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328493767209/shopsId/30898"
-    },
-    {
-      "name": "長袖シャツ/M/コットン/CML/総柄",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337914845808/shopsId/31223"
-    },
-    {
-      "name": "現行/ロールネックニット・セーター(厚手)/S/コットン/NVY",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338087415928/shopsId/31235"
     }
   ]
 }
