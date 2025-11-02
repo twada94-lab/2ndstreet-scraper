@@ -243,6 +243,10 @@
   ],
   "フライトジャケット": [
     {
+      "name": "フライトジャケット/L/羊革/CML/A-2",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332463614189/shopsId/30956"
+    },
+    {
       "name": "フライトジャケット/M/ナイロン/BLK/6162164",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340375652328/shopsId/31337"
     },
@@ -477,10 +481,6 @@
     {
       "name": "フライトジャケット/TYPE G-1/M/レザー/BRW/8462/JRC35AC/内側シミ有",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320098290700/shopsId/30620"
-    },
-    {
-      "name": "PARKA CWU-8/2/ナイロン/BEG/無地/24-011-HL-8100-30",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319633739682/shopsId/30536"
     }
   ],
   "ミリタリー": [
@@ -969,6 +969,14 @@
   ],
   "古着": [
     {
+      "name": "ジャケット/XL/ポリエステル/KHK/無地/13112242",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328477184558/shopsId/30897"
+    },
+    {
+      "name": "ボトム/L/ナイロン/BLU/無地/55211",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336102976386/shopsId/31140"
+    },
+    {
       "name": "フリースジャケット/--/ポリエステル/RED/522444",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337914842289/shopsId/31223"
     },
@@ -1089,10 +1097,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334425096934/shopsId/31049"
     },
     {
-      "name": "ジャケット/S/ポリエステル/BLK/83340/アズ フーディー",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334425096989/shopsId/31049"
-    },
-    {
       "name": "ニット・セーター(厚手)/M/ウール/GRY/総柄/01751",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332463614592/shopsId/30956"
     },
@@ -1203,10 +1207,6 @@
     {
       "name": "フリースジャケット/M/ポリエステル/BRW/25895FA19",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340654024051/shopsId/31356"
-    },
-    {
-      "name": "ナイロンジャケット/XL/ポリエステル/01 0130",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342093762068/shopsId/31435"
     }
   ]
 }
