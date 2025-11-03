@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/M/ナイロン/GRN/無地/MIL-J-82790J",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328477129498/shopsId/30897"
-    },
-    {
       "name": "MA-1/刺繍/フライトジャケット/M/ナイロン/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319436728067/shopsId/30342"
     },
@@ -481,6 +477,10 @@
     {
       "name": "Anorak Parker/USA製/推定90s/L/--/ORN",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320454264895/shopsId/30711"
+    },
+    {
+      "name": "フライトジャケット/36/レザー/BRW/無地",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320454426477/shopsId/30711"
     }
   ],
   "ミリタリー": [
@@ -989,10 +989,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343602147505/shopsId/31563"
     },
     {
-      "name": "フェードアクティブジャケット/L/コットン/BRW/JQ282",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343602154107/shopsId/31563"
-    },
-    {
       "name": "テーラードジャケット/7/シルク/IDG/インディゴ/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335501889167/shopsId/31122"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "マウンテンパーカ/XXL/ポリエステル/68045FA21",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334125847980/shopsId/31030"
+    },
+    {
+      "name": "半袖シャツ/M/コットン/GRN",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348080738528/shopsId/31950"
     }
   ]
 }
