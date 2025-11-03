@@ -69,10 +69,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333262082087/shopsId/30989"
     },
     {
-      "name": "カーディガン(厚手)/0/ウール/BRW",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2344950512885/shopsId/31679"
-    },
-    {
       "name": "テーラードジャケット/L/HM-J101",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340654014007/shopsId/31356"
     },
@@ -239,6 +235,10 @@
     {
       "name": "ジャケット/S/コットン/CML/無地/WG-J927",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343284312888/shopsId/31528"
+    },
+    {
+      "name": "ジャケット/S/コットン/BLK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343284320395/shopsId/31528"
     }
   ],
   "フライトジャケット": [
@@ -727,10 +727,6 @@
   ],
   "レザージャケット": [
     {
-      "name": "レザージャケット・ブルゾン/M/牛革/BLK/無地/112981-00-6",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319986603524/shopsId/30609"
-    },
-    {
       "name": "レザージャケット・ブルゾン/M/レザー/BLK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2239154783417/shopsId/31291"
     },
@@ -965,6 +961,10 @@
     {
       "name": "レザージャケット・ブルゾン/S/牛革/BLK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343552139360/shopsId/31554"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/S/レザー/BLK/裏ボア",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320243335614/shopsId/30688"
     }
   ],
   "古着": [
