@@ -485,6 +485,10 @@
   ],
   "ミリタリー": [
     {
+      "name": "ミリタリージャケット/--/フェイクレザー/CRM/無地",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348500063704/shopsId/31982"
+    },
+    {
       "name": "フライトジャケット/L/ナイロン/ブラック/無地/RB030006AT",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340251069097/shopsId/31333"
     },
@@ -719,10 +723,6 @@
     {
       "name": "スウェット/XL/コットン",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334863594948/shopsId/31074"
-    },
-    {
-      "name": "旧ソ連軍/タンカースジャケット/48-3/ジャケット/--/コットン/GRY",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342612662657/shopsId/31471"
     }
   ],
   "レザージャケット": [
@@ -1037,10 +1037,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336503992145/shopsId/31165"
     },
     {
-      "name": "ボトム/36/コットン/BRW/B194DKB",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336504000030/shopsId/31165"
-    },
-    {
       "name": "ベスト/L/--/CML",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336504020410/shopsId/31165"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "リュック/ポロラルフローレン/カーキ/ポリエステル/KHK/カモフラ",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339135344917/shopsId/31290"
+    },
+    {
+      "name": "ジャケット/XXL/コットン/GRN/CB1043",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335376114050/shopsId/31118"
     }
   ]
 }
