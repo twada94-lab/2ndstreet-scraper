@@ -485,6 +485,10 @@
   ],
   "ミリタリー": [
     {
+      "name": "ミリタリージャケット/XL/ポリエステル/KHK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320067164964/shopsId/30617"
+    },
+    {
       "name": "レザージャケット・ブルゾン/40/レザー/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2326825608626/shopsId/30863"
     },
@@ -719,10 +723,6 @@
     {
       "name": "ミリタリーパンツ/8415-00-407-1060/カーキ/XS",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338764678752/shopsId/31269"
-    },
-    {
-      "name": "Vintage/50s/オランダ軍/A.M.SEYNAEVE/カーゴパンツ/カーキ",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329374699978/shopsId/30922"
     }
   ],
   "レザージャケット": [
@@ -969,6 +969,14 @@
   ],
   "古着": [
     {
+      "name": "ジャケット/M/コットン/IDG/05006",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320067165121/shopsId/30617"
+    },
+    {
+      "name": "ジャケット/M/コットン/CML/103825",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320067170590/shopsId/30617"
+    },
+    {
       "name": "ベスト/M/ポリエステル/BEG/22820FA18",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343102082689/shopsId/31517"
     },
@@ -1177,10 +1185,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2326825604994/shopsId/30863"
     },
     {
-      "name": "ダウンベスト/L/ポリエステル/BLK/84240FA12",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332684245056/shopsId/30966"
-    },
-    {
       "name": "ダウンジャケット/170cm/ナイロン/GRN/チェック",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2241302180481/shopsId/31397"
     },
@@ -1203,10 +1207,6 @@
     {
       "name": "フリースジャケット/M/ポリエステル/GRY",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2345310121921/shopsId/31043"
-    },
-    {
-      "name": "テルボンヌジョガーズパンツ/XS/ポリエステル/GRY/STY24540SP22",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319234610076/shopsId/30254"
     }
   ]
 }
