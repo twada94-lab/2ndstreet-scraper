@@ -485,10 +485,6 @@
   ],
   "ミリタリー": [
     {
-      "name": "ミリタリージャケット/S/--/KHK/1901099",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335623162636/shopsId/31129"
-    },
-    {
       "name": "ミリタリージャケット/L/ナイロン/KHK/無地/6102108",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2344522823876/shopsId/31599"
     },
@@ -723,6 +719,10 @@
     {
       "name": "ボトム/--/ナイロン",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327072955815/shopsId/30871"
+    },
+    {
+      "name": "ミリタリージャケット/タンカースジャケット/Inspector/42/コットン/KHK/無地/55-J-110",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319414468077/shopsId/30329"
     }
   ],
   "レザージャケット": [
@@ -1077,10 +1077,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328477344372/shopsId/30897"
     },
     {
-      "name": "ダウンジャケット/L/ナイロン/GRN/1101570",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335614678337/shopsId/31128"
-    },
-    {
       "name": "スウェット/XL/ポリエステル/BLU",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340322749958/shopsId/31332"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ニット・セーター(厚手)/L/ウール/RED",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338725994303/shopsId/31266"
+    },
+    {
+      "name": "フライトジャケット/M/ナイロン/ORN",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338725994310/shopsId/31266"
     }
   ]
 }
