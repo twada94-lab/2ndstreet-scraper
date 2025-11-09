@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/XXL/ナイロン/KHK/8415-00-310-1126",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2241723085747/shopsId/31415"
-    },
-    {
       "name": "フライトジャケット/M/羊革/BLK/無地/TA1423-001",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336374558389/shopsId/31155"
     },
@@ -481,6 +477,10 @@
     {
       "name": "アヴィレックス/6132107/フライトジャケット/L/デニム/インディゴ/毛玉有",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347900656660/shopsId/31932"
+    },
+    {
+      "name": "モッズコート/S/ナイロン/KHK/4AC-0291/フライトジャケット",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320773973102/shopsId/30756"
     }
   ],
   "ミリタリー": [
@@ -993,10 +993,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320243337403/shopsId/30688"
     },
     {
-      "name": "90s/USA/レトロX/ベスト/フリースベスト/XS/ポリエステル",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329816094675/shopsId/30935"
-    },
-    {
       "name": "ショルダーバッグ/レザー/GRN/チェック",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343444088547/shopsId/31545"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "パーカー/M/コットン/BEG",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348030599896/shopsId/31944"
+    },
+    {
+      "name": "ジャケット/XXL/コーデュロイ/NVY/J130 MDT",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2345952467401/shopsId/31717"
     }
   ]
 }
