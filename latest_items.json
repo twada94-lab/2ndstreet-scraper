@@ -303,10 +303,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339845635718/shopsId/31319"
     },
     {
-      "name": "U.S.A.F.70th.ANNIVERSARY/アメリカ空軍70周年記念/XL/NVY/6172140",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335922255794/shopsId/31137"
-    },
-    {
       "name": "B-10 ROUGH WEAR CLOTHING CO./BR11133/1943年復刻/カーキ/38",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338765360618/shopsId/31269"
     },
@@ -317,10 +313,6 @@
     {
       "name": "フライトジャケット/40/レザー/BRW/7823",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334993063949/shopsId/31072"
-    },
-    {
-      "name": "フライトジャケット/L/ナイロン/KHK/6152132",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320253417102/shopsId/30689"
     },
     {
       "name": "フライトジャケット/--/ナイロン/KHK",
@@ -481,6 +473,14 @@
     {
       "name": "フライトジャケット/36/羊革/BRW/AC-17755/B-3/リペア有",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320773908265/shopsId/30756"
+    },
+    {
+      "name": "フライトジャケット/L/ナイロン/MIL-J-8279",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318714693141/shopsId/01805"
+    },
+    {
+      "name": "MA-1/made inUSA/フライトジャケット/M/ポリエステル/NVY/MIL-J-82790J",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2346382509037/shopsId/31789"
     }
   ],
   "ミリタリー": [
@@ -543,10 +543,6 @@
     {
       "name": "ブロークンツイル ファティーグジャケット/S/コットン/BRW/54-01-14-01012",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333173531841/shopsId/30984"
-    },
-    {
-      "name": "ミリタリージャケット/L/コットン/NVY/D1F11-609-28",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337617694321/shopsId/31204"
     },
     {
       "name": "スウェーデン軍/M-62/スノーパーカ/コート/C46/BEG",
@@ -723,13 +719,13 @@
     {
       "name": "50S～60S/TALONジップ/ブルゾン/--/--/GRN/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347561098212/shopsId/31841"
+    },
+    {
+      "name": "カーゴパンツ/--/コットン/NVY/8415-99-280-2680",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337617554007/shopsId/31204"
     }
   ],
   "レザージャケット": [
-    {
-      "name": "DISCO/レザージャケット・ブルゾン/40/レザー/BRW",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320243352253/shopsId/30688"
-    },
     {
       "name": "1982 AVREX DAGO RED TYPEA-2/M/レザー/BRW/30-1415",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318432940411/shopsId/30608"
@@ -965,6 +961,10 @@
     {
       "name": "UNIK/レザージャケット・ブルゾン/XL/レザー/BLK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332874149119/shopsId/31908"
+    },
+    {
+      "name": "ファイヤーマン/レザージャケット・ブルゾン/レザー/BRW",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340781424922/shopsId/31365"
     }
   ],
   "古着": [
