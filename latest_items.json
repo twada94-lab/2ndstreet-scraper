@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/XL/ナイロン/KHK/6172101",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320067164360/shopsId/30617"
-    },
-    {
       "name": "フライトジャケット/XL/ナイロン/KHK/MIL-J-833828",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329042949749/shopsId/30909"
     },
@@ -481,6 +477,10 @@
     {
       "name": "フライトジャケット/XS/--/BLK/無地/0615-00-573-8335",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339845635718/shopsId/31319"
+    },
+    {
+      "name": "B-10 ROUGH WEAR CLOTHING CO./BR11133/1943年復刻/カーキ/38",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338765360618/shopsId/31269"
     }
   ],
   "ミリタリー": [
@@ -997,10 +997,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320067164773/shopsId/30617"
     },
     {
-      "name": "ジャケット/M/ナイロン/NVY/23121/シェルドシンチラジャケット",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320067151162/shopsId/30617"
-    },
-    {
       "name": "ストレートパンツ/36/コットン/BEG/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2239154691279/shopsId/31291"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ダウンジャケット/M/ポリエステル/レッド",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339455743940/shopsId/31302"
+    },
+    {
+      "name": "ダウンジャケット/M/ポリエステル/ネイビー",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339455743957/shopsId/31302"
     }
   ]
 }
