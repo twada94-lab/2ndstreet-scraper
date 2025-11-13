@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/L/ナイロン/NVY/無地/20004-467",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2241722720762/shopsId/31415"
-    },
-    {
       "name": "フライトジャケット/L/レーヨン/KHK/BR11132",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2241722721158/shopsId/31415"
     },
@@ -475,12 +471,16 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319137300951/shopsId/30192"
     },
     {
-      "name": "フライトジャケット/L/ナイロン/KHK/MIL-J-82790J",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2344801842550/shopsId/31655"
-    },
-    {
       "name": "フライトジャケット/M/ポリエステル/GRN/304-438-7979",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347930798675/shopsId/31934"
+    },
+    {
+      "name": "フライトジャケット/M/ポリエステル/NVY/304-438-7979",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347930798682/shopsId/31934"
+    },
+    {
+      "name": "フライトジャケット/XXL/ナイロン/BLK/J-8148-641-1388",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347930800279/shopsId/31934"
     }
   ],
   "ミリタリー": [
@@ -1049,10 +1049,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2232784752969/shopsId/30955"
     },
     {
-      "name": "ジャケット/S/ポリエステル/BLU/83972F6",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2232784839738/shopsId/30955"
-    },
-    {
       "name": "キルティングジャケット/XL/ポリエステル/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2232784846514/shopsId/30955"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "フリースベスト/M/ポリエステル/CRM/23049FA25",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334945384320/shopsId/31083"
+    },
+    {
+      "name": "90s/ステンカラーコート/LL/キルティング/日本製/ポリエステル/BLK/CM-RL-NA-0091",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334394340748/shopsId/31047"
     }
   ]
 }
