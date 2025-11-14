@@ -383,10 +383,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334137096963/shopsId/31031"
     },
     {
-      "name": "フライトジャケット/S/ナイロン/KHK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329042985884/shopsId/30909"
-    },
-    {
       "name": "フライトジャケット/M/ポリエステル/BLK/6122136",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343303233880/shopsId/31532"
     },
@@ -481,16 +477,16 @@
     {
       "name": "フライトジャケット/M/ナイロン/KHK/25WP22",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327166982420/shopsId/30874"
+    },
+    {
+      "name": "フライトジャケット/S/ナイロン/KHK/11-18-5607-139",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327166982437/shopsId/30874"
     }
   ],
   "ミリタリー": [
     {
       "name": "ミリタリージャケット/M/--/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347170871244/shopsId/31871"
-    },
-    {
-      "name": "カーゴパンツ/--/--/BLK/無地/フランス軍Ｍ-47/後染め",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347170715289/shopsId/31871"
     },
     {
       "name": "wintex apparel tomtex sarl/ミリタリージャケット/--/--/GRN/カモフラ",
@@ -723,6 +719,10 @@
     {
       "name": "ジャケット/46/ナイロン/BLK/CHICAGO POLICE",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2346880664337/shopsId/31843"
+    },
+    {
+      "name": "m-47/後期/カーゴパンツ/47/コットン/KHK/ヘリンボーン",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2345321781282/shopsId/31711"
     }
   ],
   "レザージャケット": [
@@ -745,10 +745,6 @@
     {
       "name": "レザージャケット・ブルゾン/L/レザー/BRW",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347381725527/shopsId/31880"
-    },
-    {
-      "name": "レザージャケット・ブルゾン/L/レザー/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342132245804/shopsId/31438"
     },
     {
       "name": "レザージャケット・ブルゾン/--/レザー/BLK/無地",
@@ -965,6 +961,10 @@
     {
       "name": "brooklyn bound/レザージャケット・ブルゾン/--/レザー/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2321123675844/shopsId/30800"
+    },
+    {
+      "name": "OST. GILMOR/キルティングレザージャケット/CML/無地",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320163669196/shopsId/30630"
     }
   ],
   "古着": [
