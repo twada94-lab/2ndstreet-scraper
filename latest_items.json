@@ -255,10 +255,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332474619852/shopsId/30958"
     },
     {
-      "name": "L-2B/復刻/フライトジャケット/M/ナイロン/GRN/8415-273-3964",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337511518785/shopsId/31199"
-    },
-    {
       "name": "フライトジャケット/48/ポリエステル/NVY",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2317782164607/shopsId/30749"
     },
@@ -281,10 +277,6 @@
     {
       "name": "90S/ACK-ACK/B-3/ムートンフライトジャケット/L/羊革/BRW/レザー擦れ有/",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327833061519/shopsId/30888"
-    },
-    {
-      "name": "フライトジャケット/XL/ナイロン/KHK/TYPE BLUE FLIGHT JACKET L-2 REMAKE",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334553713369/shopsId/31057"
     },
     {
       "name": "フライトジャケット/M/ポリエステル/KHK",
@@ -481,6 +473,14 @@
     {
       "name": "フライトジャケット/XL/アクリル/BRW/1602078",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327279279257/shopsId/30877"
+    },
+    {
+      "name": "フライトジャケット/S/羊革/BRW",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327279284442/shopsId/30877"
+    },
+    {
+      "name": "A-2 GLENN MILLER/フライトジャケット/42/羊革/ブラウン/783-3250084",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343004213808/shopsId/31508"
     }
   ],
   "ミリタリー": [
@@ -1029,10 +1029,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334553695207/shopsId/31057"
     },
     {
-      "name": "ダウンジャケット/L/ポリエステル/BLK/無地/84601f6",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347101004055/shopsId/31860"
-    },
-    {
       "name": "ダウンジャケット/M/ポリエステル/NVY/無地/1101443",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342503877481/shopsId/31462"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "スカート/4/ポリエステル/YLW",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320067329554/shopsId/30617"
+    },
+    {
+      "name": "ボトム/2/コットン/NVY",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320067329561/shopsId/30617"
     }
   ]
 }
