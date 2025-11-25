@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/L/ナイロン/KHK/0615-00-573-8337",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319045325879/shopsId/30032"
-    },
-    {
       "name": "フライトジャケット/--/コットン/BLK/115837",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320964720539/shopsId/30781"
     },
@@ -273,10 +269,6 @@
     {
       "name": "30TH ANIVERSARY/フライトジャケット/M/ナイロン/BLK/6152097",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334442883630/shopsId/31051"
-    },
-    {
-      "name": "フライトジャケット/38/レザー/BRW/無地/60S/MIL-J-7823B",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336337233520/shopsId/31158"
     },
     {
       "name": "I/フライトジャケット/L/ウール/KHK",
@@ -321,10 +313,6 @@
     {
       "name": "フライトジャケット/S/ナイロン/KHK/2030-459",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340474594031/shopsId/31348"
-    },
-    {
-      "name": "フライトジャケット/M/ポリエステル/BRW",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335935077963/shopsId/31138"
     },
     {
       "name": "N-3B/フライトジャケット/32/ナイロン/BLK/無地/IN3BFC",
@@ -481,20 +469,24 @@
     {
       "name": "BLACK MARKET/×ALPHA/MA-1/AD2019/フード欠品/ジャケット/XL/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332873865577/shopsId/30973"
+    },
+    {
+      "name": "フライトジャケット/--/--/KHK/N-3B/70s～80s/SCOVILLジップ",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328566100674/shopsId/30900"
+    },
+    {
+      "name": "フライトジャケット/S/ポリエステル/RED/無地/TA0113-213",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334296879728/shopsId/31037"
+    },
+    {
+      "name": "フライトジャケット/S/--/BLK/1615-573-8335",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336103084073/shopsId/31140"
     }
   ],
   "ミリタリー": [
     {
-      "name": "ミリタリージャケット/38/コットン/CML/M13528",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319319266198/shopsId/30298"
-    },
-    {
       "name": "ジャケット/M/コットン/BRW/無地/SPEC3179/ミリタリーモチーフ",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2321131994357/shopsId/30801"
-    },
-    {
-      "name": "ミリタリージャケット/40/--/BRW",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334885609408/shopsId/31084"
     },
     {
       "name": "ジャケット/--/--/NVY/無地",
@@ -723,6 +715,14 @@
     {
       "name": "コート/2/コットン/BEG/無地/8415-21-907-9871",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348470377726/shopsId/31978"
+    },
+    {
+      "name": "ミリタリージャケット/M/コットン/KHK/M-65/80s/フィールドジャケット",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328566100582/shopsId/30900"
+    },
+    {
+      "name": "ミリタリージャケット/M/ナイロン/GRN/カモフラ/DLA100-88-C-0738",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340474838760/shopsId/31348"
     }
   ],
   "レザージャケット": [
@@ -981,10 +981,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2321131994227/shopsId/30801"
     },
     {
-      "name": "Hyper Puff Hoody/XXL/ナイロン/NVY/sty84390",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2321131994234/shopsId/30801"
-    },
-    {
       "name": "ジャケット/M/コットン/BRW/無地/SPEC3179/ミリタリーモチーフ",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2321131994357/shopsId/30801"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "半袖シャツ/XL/コットン/マルチカラー/総柄",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318614388116/shopsId/30765"
+    },
+    {
+      "name": "フリースジャケット/--/ポリエステル/IVO/STY68095FA23",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318614400962/shopsId/30765"
     }
   ]
 }
