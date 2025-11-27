@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/M/B-3/ムートンジャケット/BRW",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340414684662/shopsId/31343"
-    },
-    {
       "name": "フライトジャケット/--/レザー/BRW/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338894946462/shopsId/31278"
     },
@@ -481,6 +477,10 @@
     {
       "name": "23AW/Bullard Bomber/フライトジャケット/L/ナイロン/ネイビー/1082UCG",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335192421776/shopsId/31679"
+    },
+    {
+      "name": "フェイクムートン/B-3/フライトジャケット/XL/フェイクレザー/BLK/TA1548-175",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319596495717/shopsId/30521"
     }
   ],
   "ミリタリー": [
@@ -1033,10 +1033,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348420033931/shopsId/31355"
     },
     {
-      "name": "スウェット/L/ポリエステル/GRY/25551",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338894940118/shopsId/31278"
-    },
-    {
       "name": "マウンテンパーカー/L/ポリエステル/68035FA19",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334125892577/shopsId/31030"
     },
@@ -1205,8 +1201,12 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336305806701/shopsId/31153"
     },
     {
-      "name": "長袖Tシャツ/S/ポリエステル/BEG/無地/40235SP23",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336305806718/shopsId/31153"
+      "name": "90s/裏地キルティング/ジャケット/M/ウール/BEG/チェック",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347760016321/shopsId/31013"
+    },
+    {
+      "name": "リュック/--/BLK/無地/A172077",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2330025031368/shopsId/30945"
     }
   ]
 }
