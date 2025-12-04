@@ -969,10 +969,6 @@
   ],
   "古着": [
     {
-      "name": "ジャケット/M/コットン/BEG",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343822225564/shopsId/31569"
-    },
-    {
       "name": "ジャケット/L/コットン/BEG/チェック",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343822354691/shopsId/31569"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ダウンジャケット/M/ポリエステル/BLU",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347170904539/shopsId/31871"
+    },
+    {
+      "name": "ダウンジャケット/L/ナイロン/BLK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347170904928/shopsId/31871"
     }
   ]
 }
