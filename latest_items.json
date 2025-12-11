@@ -137,10 +137,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341441777211/shopsId/31404"
     },
     {
-      "name": "スーツ/XL/ウール/GRY/DE-J004/DE-P004",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341083868940/shopsId/31385"
-    },
-    {
       "name": "ボトム/インタック/M/ウール/BLK/無地/HP-08005M",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2326994354591/shopsId/30868"
     },
@@ -239,16 +235,16 @@
     {
       "name": "半袖カットソー/M/ポリエステル/GRY/総柄/IM02FJ951",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341022116354/shopsId/31381"
+    },
+    {
+      "name": "ボトム/3/コットン/NVY/星座柄/IM41FF533",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329263203521/shopsId/30915"
     }
   ],
   "フライトジャケット": [
     {
       "name": "フライトジャケット/XL/ナイロン/KHK/6102173/MA-1/AMERICAN VOLUNTEER GROUP",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336232235957/shopsId/31147"
-    },
-    {
-      "name": "フライトジャケット/38/ナイロン/KHK/無地/5L-2BX",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336232234806/shopsId/31147"
     },
     {
       "name": "MA-1/リバーシブル/フライトジャケット/M/ポリエステル/KHK",
@@ -481,6 +477,10 @@
     {
       "name": "フライトジャケット/S/ナイロン/KHK/6272070",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339594169670/shopsId/31305"
+    },
+    {
+      "name": "フライトジャケット/38/ナイロン/NVY",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334455107471/shopsId/31052"
     }
   ],
   "ミリタリー": [
