@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/XXL/ポリエステル/BRW/530855",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319695059339/shopsId/30556"
-    },
-    {
       "name": "N-3B/フライトジャケット/XL/ナイロン/BLK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320098339850/shopsId/30620"
     },
@@ -403,10 +399,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329043082261/shopsId/30909"
     },
     {
-      "name": "フライトジャケット/S/--/KHK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329043082445/shopsId/30909"
-    },
-    {
       "name": "フライトジャケット/XL/フェイクレザー/BRW/TA1548-275",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328655703991/shopsId/30903"
     },
@@ -481,6 +473,14 @@
     {
       "name": "フライトジャケット/M/ナイロン/KHK/50316",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332496262432/shopsId/30959"
+    },
+    {
+      "name": "フライトジャケット/--/ナイロン/BLK/6162164",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327484774042/shopsId/30882"
+    },
+    {
+      "name": "J.K MEMBERS/フライトジャケット/L/--/BRW",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341894863844/shopsId/31426"
     }
   ],
   "ミリタリー": [
@@ -811,10 +811,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327279501648/shopsId/30877"
     },
     {
-      "name": "レザージャケット・ブルゾン/40/レザー/BLU",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342744613923/shopsId/31487"
-    },
-    {
       "name": "レザージャケット・ブルゾン/M/ポリエステル/BRW",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340837956643/shopsId/31518"
     },
@@ -965,6 +961,10 @@
     {
       "name": "レザージャケット・ブルゾン/M/羊革/BLK/無地/L17SS-17",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2306915909086/shopsId/02464"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/46/レザー/BLK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2306915925024/shopsId/02464"
     }
   ],
   "古着": [
