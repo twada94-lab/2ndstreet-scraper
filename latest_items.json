@@ -243,16 +243,8 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/M/レザー/CML/63531",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338933665835/shopsId/31280"
-    },
-    {
       "name": "フライトジャケット/34/ポリエステル/KHK/1N3BFCO",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335341653706/shopsId/31109"
-    },
-    {
-      "name": "フライトジャケット/M/ナイロン/BLK/無地/0615-00-573-8335",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319377325493/shopsId/30311"
     },
     {
       "name": "M-65/フィールドジャケット/バックプリント/フライトジャケット/XL/コットン/KHK/6192112",
@@ -481,6 +473,14 @@
     {
       "name": "フライトジャケット/XL/ナイロン/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319225873091/shopsId/30251"
+    },
+    {
+      "name": "フライトジャケット/--/ポリエステル/NVY/783-3252049/リバーシブル/SUBWAY SERIES",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334425279542/shopsId/31049"
+    },
+    {
+      "name": "フライトジャケット/L/ナイロン/GRN/1615-573-8335/N-3B",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334553780712/shopsId/31057"
     }
   ],
   "ミリタリー": [
@@ -1037,10 +1037,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342537191003/shopsId/31458"
     },
     {
-      "name": "ジャケット/XL/コットン/NVY/無地",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342537194295/shopsId/31458"
-    },
-    {
       "name": "コート/L/ポリエステル/WHT/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2241723453584/shopsId/31415"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "フィールドコート/XL/コットン/GRY/ハンティングジャケット",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343414412891/shopsId/31542"
+    },
+    {
+      "name": "1129613 スノースパイク6/1129613",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343430768552/shopsId/31543"
     }
   ]
 }
