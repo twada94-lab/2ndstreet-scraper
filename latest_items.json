@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/38/ナイロン/NVY/8310-45600-281",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343633485317/shopsId/31565"
-    },
-    {
       "name": "G-1/USNAVY/ワッペン/色落ち有/フライトジャケット/--/レザー/BRW/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339485368786/shopsId/31303"
     },
@@ -257,10 +253,6 @@
     {
       "name": "CROSSFAITH/フライトジャケット/--/ナイロン/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327085375600/shopsId/30873"
-    },
-    {
-      "name": "MA-1/キルティング/フライトジャケット/XL/ナイロン/BLK/TA1741-9001",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2324665166719/shopsId/30823"
     },
     {
       "name": "フライトジャケット/M/ポリエステル/GRN/無地/601-287-1476",
@@ -337,10 +329,6 @@
     {
       "name": "民間他/CWU-36P/M",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332680302654/shopsId/30887"
-    },
-    {
-      "name": "フライトジャケット/M/6152131",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327665415863/shopsId/30886"
     },
     {
       "name": "フライトジャケット/M/ナイロン/KHK/無地/20024-21/N-3B",
@@ -481,6 +469,18 @@
     {
       "name": "CUSTOM CWU TOP GUNフライトジャケット/XL/ナイロン/ネイビー/6102176//",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328642590351/shopsId/30902"
+    },
+    {
+      "name": "フライトジャケット/M/ポリエステル/BLK/無地/783-3252071",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320393071066/shopsId/30705"
+    },
+    {
+      "name": "N-3B/フライトジャケット/36/ナイロン/GRN",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319226235751/shopsId/30251"
+    },
+    {
+      "name": "ma-1/フライトジャケット/M/ポリエステル/GRN/無地/0615-00-573-8335",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334296863055/shopsId/31037"
     }
   ],
   "ミリタリー": [
@@ -969,10 +969,6 @@
   ],
   "古着": [
     {
-      "name": "フリースジャケット/M/ポリエステル/GRN/STY23055FA14",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343633515458/shopsId/31565"
-    },
-    {
       "name": "長袖シャツ/L/コットン/BLU",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343633522852/shopsId/31565"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ハイカットスニーカー/23.5cm/NVY",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336706739417/shopsId/31174"
+    },
+    {
+      "name": "ショルダーバッグ/ナイロン/BRD/STY48813",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338205831425/shopsId/31241"
     }
   ]
 }
