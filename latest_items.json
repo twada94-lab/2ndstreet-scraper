@@ -351,10 +351,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341894798931/shopsId/31426"
     },
     {
-      "name": "フライトジャケット/3/アクリル/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341894799204/shopsId/31426"
-    },
-    {
       "name": "フライトジャケット/L/ナイロン/BLK/無地/22106－401",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328414460721/shopsId/30895"
     },
@@ -481,6 +477,10 @@
     {
       "name": "ma-1/フライトジャケット/M/ナイロン/KHK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2344912201116/shopsId/31669"
+    },
+    {
+      "name": "フライトジャケット/L/フェイクレザー/BRW/無地/TA1689-275",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343572796512/shopsId/31557"
     }
   ],
   "ミリタリー": [
@@ -1069,10 +1069,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328943415490/shopsId/30907"
     },
     {
-      "name": "星条旗/ニット・セーター(厚手)/XS/コットン/NVY",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337045189420/shopsId/31186"
-    },
-    {
       "name": "アクティブジャケット/USA製/XL/コットン/BEG/J131BRN",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347600560687/shopsId/31903"
     },
@@ -1197,16 +1193,20 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332874280164/shopsId/31908"
     },
     {
-      "name": "トップス/XL/ポリエステル/BLK/40235",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336005740145/shopsId/31143"
-    },
-    {
       "name": "29435 RUBICON RIDER JACKET/ウェアー/XS/KHK/29435",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2321483109997/shopsId/31281"
     },
     {
       "name": "ライトアルパインダウン ジャケット/L/ナイロン/PUP",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327634740880/shopsId/30885"
+    },
+    {
+      "name": "現行/スウィングトップ/ジャケット/S/コットン/NVY/無地",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332874259443/shopsId/31908"
+    },
+    {
+      "name": "ナイロンジャケット/M/ナイロン/NVY/無地/205107",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333354731923/shopsId/30995"
     }
   ]
 }
