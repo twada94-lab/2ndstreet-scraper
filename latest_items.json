@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/XL/ナイロン/NVY/無地/6172116",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320387395833/shopsId/30704"
-    },
-    {
       "name": "フライトジャケット/M/ナイロン/BLK/783-3952019/MIL-J-6279AVX",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336374685238/shopsId/31155"
     },
@@ -481,6 +477,10 @@
     {
       "name": "KNOXVILLE/N-2B/フライトジャケット/L/--/GRN/無地/1615-573-8335",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347870790166/shopsId/31929"
+    },
+    {
+      "name": "フライトジャケット/L/ナイロン/NVY/0615-00-573-8335",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347081424775/shopsId/31859"
     }
   ],
   "ミリタリー": [
@@ -977,10 +977,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338795302411/shopsId/31272"
     },
     {
-      "name": "ダウンジャケット/S/ナイロン/ブラック/1101639",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334384084591/shopsId/31045"
-    },
-    {
       "name": "ニット・セーター(厚手)/M/ウール/CRM",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334384105241/shopsId/31045"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ジャケット/2L/コットン/CML",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329474101159/shopsId/30928"
+    },
+    {
+      "name": "フリースベスト/XS/ポリエステル/CRM/無地/STY23048",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329473917102/shopsId/30928"
     }
   ]
 }
