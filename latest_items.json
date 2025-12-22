@@ -271,10 +271,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342362243045/shopsId/31452"
     },
     {
-      "name": "40s-50s B-15D/フライトジャケット/40/汚れ・襟破れ有",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338563606390/shopsId/31263"
-    },
-    {
       "name": "フライトジャケット/40/ナイロン/GRN/2067262",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2339174868078/shopsId/31294"
     },
@@ -351,20 +347,12 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320135639660/shopsId/30625"
     },
     {
-      "name": "N-3B/フライトジャケット/M/ウール/グレー/8415-269-0419",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320135639639/shopsId/30625"
-    },
-    {
       "name": "N-3B/フライトジャケット/S/--/KHK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329374835635/shopsId/30922"
     },
     {
       "name": "フライトジャケット/M/ナイロン/NVY/無地/6102225/リバーシブル",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319352998988/shopsId/30308"
-    },
-    {
-      "name": "B-3/フライトジャケット/S/羊革/ブラウン",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320204442498/shopsId/30684"
     },
     {
       "name": "AC-17023/B-3/フライトジャケット/S/レザー/BRW",
@@ -423,10 +411,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333513732105/shopsId/31000"
     },
     {
-      "name": "フライトジャケット/L/--/KHK/無地/8415-00-310-1133",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2326994383089/shopsId/30868"
-    },
-    {
       "name": "FLIGHT EQUIPMENT/フライトジャケット/L/牛革/BLK/3104",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319946559038/shopsId/30604"
     },
@@ -481,6 +465,22 @@
     {
       "name": "フライトジャケット/S/ナイロン/KHK/0234AC05",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333525270350/shopsId/31001"
+    },
+    {
+      "name": "19SS/REVERSIBLE MA-1 フライトジャケット/--/ポリエステル/NVY/UE-190015",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332874264690/shopsId/30973"
+    },
+    {
+      "name": "フライトジャケット/SOUVENIR/スーベニア/MA-1/M/ナイロン/KHK/3162036",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320157050627/shopsId/30628"
+    },
+    {
+      "name": "フライトジャケット/L/ポリエステル/KHK/6172130",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320157050856/shopsId/30628"
+    },
+    {
+      "name": "×RHC Ron Herman/CWU Flight Jacket/フライトジャケット/S/NVY/316204",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320067460844/shopsId/30617"
     }
   ],
   "ミリタリー": [
@@ -1013,10 +1013,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340322862589/shopsId/31332"
     },
     {
-      "name": "ナイロンジャケット/L/ナイロン/GRN",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2344950581287/shopsId/31679"
-    },
-    {
       "name": "キルティングジャケット/11/ポリエステル/KHK/無地/JK RL YA 2061",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348890462125/shopsId/32016"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ショルダーバッグ/ポリエステル/GRY/無地/408360",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329063157086/shopsId/30912"
+    },
+    {
+      "name": "ボストンバッグ/--/GRN/チェック",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318483229695/shopsId/30553"
     }
   ]
 }
