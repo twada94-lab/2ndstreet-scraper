@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/L/ナイロン/KHK/TA0114-076",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337622887374/shopsId/31206"
-    },
-    {
       "name": "Type BIG MA-1/フライトジャケット/M/ナイロン/マルチカラー/無地/783-2252028",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340322856021/shopsId/31332"
     },
@@ -481,6 +477,10 @@
     {
       "name": "フライトジャケット/M-1/M/コットン/YLW/無地/JC-10031",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334565645887/shopsId/31058"
+    },
+    {
+      "name": "フライトジャケット/XL/ポリエステル/KHK/無地/DD6056-326",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335192489585/shopsId/31679"
     }
   ],
   "ミリタリー": [
@@ -1169,10 +1169,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328975378459/shopsId/30904"
     },
     {
-      "name": "ダウンジャケット/L/ナイロン/BLK/無地/1101503",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320243435543/shopsId/30688"
-    },
-    {
       "name": "スイングトップ/XL/コットン/BEG",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341798182157/shopsId/31418"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ナイロンジャケット/M/ナイロン/グレー/0LWT6",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320204173262/shopsId/30684"
+    },
+    {
+      "name": "ブルゾン/--/ナイロン/PUP/総柄/STY64231SP17",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348420031807/shopsId/32085"
     }
   ]
 }
