@@ -537,10 +537,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335033057898/shopsId/31097"
     },
     {
-      "name": "ボトム/31/コットン/KHK/内タグ無し",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319366179908/shopsId/30310"
-    },
-    {
       "name": "ジャケット/--/コットン/KHK/無地/フランス軍",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338522858488/shopsId/31262"
     },
@@ -723,6 +719,10 @@
     {
       "name": "60s/チェコ軍/M60/コートライナー/--/コットン/KHK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337321775460/shopsId/31195"
+    },
+    {
+      "name": "ミリタリージャケット/M/コットン/カモフラ",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341736361026/shopsId/31417"
     }
   ],
   "レザージャケット": [
@@ -733,10 +733,6 @@
     {
       "name": "レザージャケット・ブルゾン/L/レザー/BRW/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347190655510/shopsId/31872"
-    },
-    {
-      "name": "レザージャケット・ブルゾン/40/レザー/BRW/1842SM",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318483410376/shopsId/30553"
     },
     {
       "name": "レザージャケット・ブルゾン/44/牛革/BLK/無地",
@@ -965,6 +961,10 @@
     {
       "name": "レザージャケット・ブルゾン/L/レザー/マルチカラー",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335623243212/shopsId/31129"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/48/レザー/BLK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333322300960/shopsId/30993"
     }
   ],
   "古着": [
