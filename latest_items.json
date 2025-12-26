@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "U.S.A.F.70thAnniversary/MA-1/フライトジャケット/M/ポリ/NVY/6172140",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334533836996/shopsId/31056"
-    },
-    {
       "name": "フライトジャケット/42/--/KHK/無地/8300-47072",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337263872616/shopsId/31193"
     },
@@ -481,6 +477,10 @@
     {
       "name": "80s/フライトジャケット/--/コットン/BLK/無地/8415-21-859-0494",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332874279649/shopsId/31908"
+    },
+    {
+      "name": "フライトジャケット/XL/ナイロン/GRN/MIL-J-6278",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320666845691/shopsId/30737"
     }
   ],
   "ミリタリー": [
@@ -575,10 +575,6 @@
     {
       "name": "コート/--/レザー/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2327844759597/shopsId/30887"
-    },
-    {
-      "name": "13スター/リメイクパンツ/ボトム/--/コットン/KHK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333513709466/shopsId/31000"
     },
     {
       "name": "カーゴパンツ/1/ナイロン/NVY/無地/POB-25094CE",
@@ -723,6 +719,10 @@
     {
       "name": "ミリタリージャケット/--/コットン/GRN/カモフラ",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318847932025/shopsId/01853"
+    },
+    {
+      "name": "ミリタリージャケット/--/コットン/GRN/M-64",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2318847932032/shopsId/01853"
     }
   ],
   "レザージャケット": [
@@ -891,10 +891,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334455165754/shopsId/31052"
     },
     {
-      "name": "レザージャケット・ブルゾン/M/羊革/BRW/無地",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334455165761/shopsId/31052"
-    },
-    {
       "name": "レザージャケット・ブルゾン/3/レザー/BLK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334455141895/shopsId/31052"
     },
@@ -965,6 +961,10 @@
     {
       "name": "レザージャケット・ブルゾン/LL/レザー/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336695001373/shopsId/31173"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/S/羊革/BLK/W260757",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336695014069/shopsId/31173"
     }
   ],
   "古着": [
