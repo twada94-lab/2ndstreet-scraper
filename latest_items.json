@@ -243,6 +243,14 @@
   ],
   "フライトジャケット": [
     {
+      "name": "フライトジャケット/M/ナイロン/BLK/無地/GE-161012/16AW/",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335454927152/shopsId/31124"
+    },
+    {
+      "name": "フライトジャケット/L/ナイロン/BLK/無地/GE-161012",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335454927169/shopsId/31124"
+    },
+    {
       "name": "B-3フライトジャケット/羊革/ダメージ使用感有/36/BRW/韓国製",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334043112023/shopsId/31028"
     },
@@ -473,14 +481,6 @@
     {
       "name": "フライトジャケット/M/ポリエステル/NVY/6172143",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337555520324/shopsId/31202"
-    },
-    {
-      "name": "フライトジャケット/40/ナイロン/BLK/051-221039",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320074461384/shopsId/30618"
-    },
-    {
-      "name": "フライトジャケット/80s/USA製/IDEALジップ/M/MIL-J-82790E/リブ毛玉有",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319324695419/shopsId/30300"
     }
   ],
   "ミリタリー": [
@@ -1009,10 +1009,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333116851395/shopsId/30980"
     },
     {
-      "name": "90s/裏フリース/ウーマンL/ポーラテック/ナイロンジャケット/汚れ有/L/ナイロン/PUP",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334043121919/shopsId/31028"
-    },
-    {
       "name": "00s/デトロイトジャケット/--/コットン/BRW/無地/J97 DKB/メキシコ製/裏地ブランケット",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335043163237/shopsId/31098"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ニューホープジャケット/ジャケット/M/コットン/RED",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329374853707/shopsId/30922"
+    },
+    {
+      "name": "クラシックレトロカーディガン/00s/USA製/M/ポリエステル/RED/23024",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319234833062/shopsId/30254"
     }
   ]
 }
