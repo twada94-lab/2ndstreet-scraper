@@ -243,6 +243,10 @@
   ],
   "フライトジャケット": [
     {
+      "name": "フライトジャケット",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338904729078/shopsId/31279"
+    },
+    {
       "name": "フライトジャケット/42/コットン/KHK/6112139",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338726341113/shopsId/31266"
     },
@@ -477,10 +481,6 @@
     {
       "name": "フライトジャケット/M/--/KHK/無地/cwu-45",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343621597428/shopsId/31561"
-    },
-    {
-      "name": "フライトジャケット/3/ナイロン/NVY",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341100882621/shopsId/31386"
     }
   ],
   "ミリタリー": [
@@ -969,6 +969,14 @@
   ],
   "古着": [
     {
+      "name": "ショルダーバッグ/PVC",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335296036111/shopsId/31113"
+    },
+    {
+      "name": "オーバーオール/30/コットン/CML/無地/102776-211",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348490820400/shopsId/31980"
+    },
+    {
       "name": "キャップ/--/コットン/BRW/無地/メンズ",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347870930487/shopsId/31929"
     },
@@ -1199,14 +1207,6 @@
     {
       "name": "ニット・セーター(厚手)/XL/ウール/CRM",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333137182379/shopsId/30982"
-    },
-    {
-      "name": "トートバッグ/PVC/GRN/チェック",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347870901630/shopsId/31929"
-    },
-    {
-      "name": "テント/ドーム/1~2人用/GRN",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2346130387610/shopsId/31769"
     }
   ]
 }
