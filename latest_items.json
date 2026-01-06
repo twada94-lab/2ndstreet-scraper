@@ -25,10 +25,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2346431461873/shopsId/31794"
     },
     {
-      "name": "ミリタリージャケット/S/コットン/KHK/HH-j062",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320216125662/shopsId/30685"
-    },
-    {
       "name": "半袖シャツ/S/コットン/BLU/チェック/HI-B026",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320216125686/shopsId/30685"
     },
@@ -239,16 +235,16 @@
     {
       "name": "コート/M/ウール/GRY/無地/HL-C019",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338726351846/shopsId/31266"
+    },
+    {
+      "name": "ジャケット/L/コットン/WHT/無地/HI-J018-051-1-4",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338726353475/shopsId/31266"
     }
   ],
   "フライトジャケット": [
     {
       "name": "フライトジャケット/L/ナイロン/KHK/20094-476",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341835689878/shopsId/31425"
-    },
-    {
-      "name": "A1/フライトジャケット/レザージャケット・ブルゾン/M/牛革/BRW",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2325603382208/shopsId/30849"
     },
     {
       "name": "フライトジャケット/S/ナイロン/KHK/243799",
@@ -481,6 +477,10 @@
     {
       "name": "60s/ALPHA社/MA-1/M/ナイロン/KHK/CROWNジップ/フェード/8415-818-735",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2345362460115/shopsId/31701"
+    },
+    {
+      "name": "NEWRICH BOMBER JACKET/フライトジャケット/L/フェイクレザー/BLK/BR24AW-00004",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2349230015643/shopsId/32102"
     }
   ],
   "ミリタリー": [
@@ -555,10 +555,6 @@
     {
       "name": "ミリタリー/ジャケット/--/--/BLK/8415-01-422-1991",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320685927934/shopsId/30739"
-    },
-    {
-      "name": "ミリタリージャケット/S/コットン/KHK/HH-j062",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320216125662/shopsId/30685"
     },
     {
       "name": "ジャケット/--/--/KHK/無地",
@@ -723,6 +719,10 @@
     {
       "name": "20AW/NylonTwill Coat/切替ドッキングコート/MA-1 ミリタリージャケット/20-0235",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2335033085464/shopsId/31097"
+    },
+    {
+      "name": "ミリタリージャケット/BLK/無地/ドイツ軍/後染め",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348980314808/shopsId/32026"
     }
   ],
   "レザージャケット": [
