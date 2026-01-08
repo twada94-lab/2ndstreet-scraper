@@ -727,8 +727,8 @@
   ],
   "レザージャケット": [
     {
-      "name": "レザージャケット・ブルゾン/40/牛革/BRW/無地",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343094239115/shopsId/31506"
+      "name": "レザージャケット・ブルゾン/one/ポリエステル/BLK/無地/LWFJ254115",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343460641610/shopsId/30973"
     },
     {
       "name": "レザージャケット・ブルゾン/M/羊革/GRY/無地/92-18-0321-202",
@@ -1193,10 +1193,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336463140518/shopsId/31162"
     },
     {
-      "name": "フリースジャケット/M/ポリエステル/GRN/無地/25023/96s/USA製/シンチラスナップT",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328566290931/shopsId/30900"
-    },
-    {
       "name": "ボトム/34/コットン/BRW/100791-246",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2334273522883/shopsId/31042"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "ナイロンジャケット/S/ナイロン/BRW/無地/RN51884",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320485250218/shopsId/30715"
+    },
+    {
+      "name": "ダウンベスト/M/ナイロン/ORN",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343197527454/shopsId/31521"
     }
   ]
 }
