@@ -271,10 +271,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2346000880654/shopsId/31748"
     },
     {
-      "name": "フライトジャケット/--/レザー/BLK",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2344313542467/shopsId/31622"
-    },
-    {
       "name": "Benetton Formula1/フライトジャケット/L/ポリエステル/GRY/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2321514742773/shopsId/30806"
     },
@@ -297,10 +293,6 @@
     {
       "name": "フライトジャケット/ネイビー/無地/8415-21-907-9314",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338803301207/shopsId/31275"
-    },
-    {
-      "name": "フライトジャケット/38/ナイロン/GRN/8300-470731",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2229992781706/shopsId/31929"
     },
     {
       "name": "フライトジャケット/38/山羊革/BRW/8193",
@@ -481,6 +473,14 @@
     {
       "name": "フライトジャケット/--/--/NVY/無地/BOSS",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343621607745/shopsId/31561"
+    },
+    {
+      "name": "ボスジャン/MA-1タイプ/フライトジャケット/--/ポリエステル/BLK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343062851745/shopsId/31515"
+    },
+    {
+      "name": "フライトジャケット/XL/ナイロン/BLK/無地/TA1049-001",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333864482049/shopsId/31017"
     }
   ],
   "ミリタリー": [
@@ -709,10 +709,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338341719366/shopsId/31256"
     },
     {
-      "name": "ミリタリージャケット/--/コットン/KHK/無地/92Ｃ",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329874316146/shopsId/30940"
-    },
-    {
       "name": "ミリタリージャケット/--/--/KHK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329874316153/shopsId/30940"
     },
@@ -723,6 +719,10 @@
     {
       "name": "ミリタリージャケット/PANTHER CLAWS/L/コットン/GRN/カモフラ/101253021001",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320054365305/shopsId/30616"
+    },
+    {
+      "name": "カーゴパンツ/--/--/KHK",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328975433189/shopsId/30904"
     }
   ],
   "レザージャケット": [
