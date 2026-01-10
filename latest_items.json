@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/S/ナイロン/GRN/無地/1615-573-8335",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337555561235/shopsId/31202"
-    },
-    {
       "name": "AVIREX OFFICERS UNIFORM B-3/フライトジャケット/L/コットン/BEG/613253",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2343391799442/shopsId/31533"
     },
@@ -481,6 +477,10 @@
     {
       "name": "MA-1/フライトジャケット/L/ナイロン/KHK/JFK-J-93790Z",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329815720377/shopsId/30935"
+    },
+    {
+      "name": "B-3/フライトジャケット/38/羊革/BRW/AC-17755",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2321483140242/shopsId/30805"
     }
   ],
   "ミリタリー": [
@@ -977,10 +977,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320803668626/shopsId/30759"
     },
     {
-      "name": "ダウンジャケット/M/ナイロン/BLK/1101534",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320803669241/shopsId/30759"
-    },
-    {
       "name": "スウェット/XL/コットン/NVY/I027014",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2320803656968/shopsId/30759"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "キルティングジャケット/XL/ポリエステル/NVY/68150FA24",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341234844885/shopsId/31393"
+    },
+    {
+      "name": "ジャケット/S/ポリエステル/CRM/STY23048FA19",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341234847817/shopsId/31393"
     }
   ]
 }
