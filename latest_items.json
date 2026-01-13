@@ -263,10 +263,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342548972042/shopsId/31053"
     },
     {
-      "name": "フライトジャケット/L/ナイロン/KHK/0615-00-573-8335",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2233251363589/shopsId/30988"
-    },
-    {
       "name": "フライトジャケット/M/ナイロン/GRN/MIL-J-6279",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332674835748/shopsId/30965"
     },
@@ -481,6 +477,10 @@
     {
       "name": "フライトジャケット/L/ナイロン/GRN/無地/20094-276",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2333494285539/shopsId/30999"
+    },
+    {
+      "name": "フライトジャケット/mil-j-6278f",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2321473786047/shopsId/30807"
     }
   ],
   "ミリタリー": [
@@ -735,10 +735,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2347561302968/shopsId/31841"
     },
     {
-      "name": "レザージャケット・ブルゾン/M/羊革/BRW",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2337617920611/shopsId/31204"
-    },
-    {
       "name": "レザージャケット・ブルゾン/M/レザー",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336604859347/shopsId/31170"
     },
@@ -753,10 +749,6 @@
     {
       "name": "レザージャケット・ブルゾン/XL/レザー/BLK",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2233251372208/shopsId/30988"
-    },
-    {
-      "name": "U.S.ARMED FORCES AVIATOR JACKET/レザージャケット/40/レザー/BR",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332674831115/shopsId/30965"
     },
     {
       "name": "レザージャケット・ブルゾン/L/レザー/BLK/無地/00E8F202",
@@ -965,6 +957,14 @@
     {
       "name": "PLANTLIFE HOODED ZIP JACKET/レザージャケット・ブルゾン/L/レザー/ブラック",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319987139473/shopsId/30609"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/L/羊革/BLK/無地/6519417",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319987147751/shopsId/30609"
+    },
+    {
+      "name": "レザージャケット・ブルゾン/XS/レザー/BLK/02-2305000",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2342362280774/shopsId/31452"
     }
   ],
   "古着": [
