@@ -243,10 +243,6 @@
   ],
   "フライトジャケット": [
     {
-      "name": "フライトジャケット/L/ナイロン/GRN/BR10981/BR13109",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2328566325824/shopsId/30900"
-    },
-    {
       "name": "㈱バイスコーポレーション/N-3B/L/グリーン/232M8543/着用感有",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2348820055564/shopsId/32005"
     },
@@ -481,6 +477,10 @@
     {
       "name": "フライトジャケット/L/ポリエステル/BLK/6132058",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2336043077661/shopsId/31133"
+    },
+    {
+      "name": "フライトジャケット/M/レザー/BRW/G-1/レザージャケット",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319687781088/shopsId/30555"
     }
   ],
   "ミリタリー": [
@@ -731,10 +731,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2324665249436/shopsId/30823"
     },
     {
-      "name": "レザージャケット・ブルゾン/M/羊革/ネイビー/616-54621",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2324253263875/shopsId/30813"
-    },
-    {
       "name": "レザージャケット・ブルゾン/--/牛革/BRW/P93193V",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329865352511/shopsId/30937"
     },
@@ -965,6 +961,10 @@
     {
       "name": "sahara/レザージャケット・ブルゾン/--/フェイクレザー/BLK/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2330001083626/shopsId/31288"
+    },
+    {
+      "name": "レザージャケット/48/レザー/BRD",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2319931928801/shopsId/30601"
     }
   ],
   "古着": [
