@@ -11,7 +11,7 @@ DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 COUNT_FILE = "latest_count.txt"
 
 # ターゲットのURL（ご自身の検索条件のURLを入れてください）
-TARGET_URL = "https://www.2ndstreet.jp/search?..." 
+TARGET_URL = "https://www.2ndstreet.jp/search?keyword=&selected_category=&brand%5B%5D=001269&brand%5B%5D=000871&brand%5B%5D=002098&brand%5B%5D=006204&brand%5B%5D=000567&brand%5B%5D=000269&brand%5B%5D=004814&brand%5B%5D=003655&brand%5B%5D=006633&brand%5B%5D=000131&minPrice=&maxPrice=100000&sortBy=arrival&category=910001&td_seg=tds279974" 
 
 def send_discord_notify(message):
     if not DISCORD_WEBHOOK_URL:
