@@ -255,10 +255,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2340837787421/shopsId/31506"
     },
     {
-      "name": "フライトジャケット/S/ナイロン/KHK/無地/20301-276",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329484666150/shopsId/30929"
-    },
-    {
       "name": "フライトジャケット/M/レザー/BRW/無地/TA1548-275",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2346382810935/shopsId/31789"
     },
@@ -289,10 +285,6 @@
     {
       "name": "フライトジャケット/42/コットン/NVY",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2329484655383/shopsId/30929"
-    },
-    {
-      "name": "MA-1/バックエンブレム/フライトジャケット/L/ナイロン/KHK/無地/TA0199-076",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2325793785285/shopsId/30853"
     },
     {
       "name": "フライトジャケット/L/ナイロン/KHK/無地/20093-8376",
@@ -481,6 +473,14 @@
     {
       "name": "COMBAT CLOTHING/フライトジャケット/M/羊革/BRW/無地",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2218991726733/shopsId/02484"
+    },
+    {
+      "name": "フライトジャケット/S/ナイロン/BLK/MIL-J-82790J",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338726291968/shopsId/31266"
+    },
+    {
+      "name": "MA-1/L2-B Model/タグ付/M/ナイロン/BLK/TA0414-001",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2338726291975/shopsId/31266"
     }
   ],
   "ミリタリー": [
@@ -1025,10 +1025,6 @@
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341607750362/shopsId/31408"
     },
     {
-      "name": "ジャケット/XL/ポリエステル/BRD/84212FA22",
-      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341607766080/shopsId/31408"
-    },
-    {
       "name": "ダウンジャケット/S/ナイロン/ORN/30551FA12",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2341607769647/shopsId/31408"
     },
@@ -1207,6 +1203,10 @@
     {
       "name": "14-16/ビッグポニーポロシャツ/--/コットン/GRY⑥",
       "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332874302910/shopsId/30973"
+    },
+    {
+      "name": "ビッグポニーTシャツ/XS/コットン/NVYタグ付⑥",
+      "url": "https://www.2ndstreet.jp/goods/detail/goodsId/2332874304402/shopsId/30973"
     }
   ]
 }
