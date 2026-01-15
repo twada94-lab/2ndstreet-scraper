@@ -1,67 +1,84 @@
-name: Run 2ndStreet Scraper (High Frequency)
+import cloudscraper
+from bs4 import BeautifulSoup
+import os
+import time
+import random
 
-on:
-  schedule:
-    # 6時間ごとにジョブをリフレッシュ
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
+# 環境変数
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
+COUNT_FILE = "latest_count.txt"
+# ★ ここに検索結果のURLを貼り付けてください
+TARGET_URL = "https://www.2ndstreet.jp/search?..." 
 
-jobs:
-  run:
-    runs-on: ubuntu-latest
-    timeout-minutes: 350
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install requests beautifulsoup4
-          
-          # Gitの初期設定
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "github-actions"
-          
-          # Gitエラー防止のため、ファイルが存在しない場合は空で作っておく
-          touch latest_count.txt
-
-      - name: Run scraper loop
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: |
-          # 21000秒 (5時間50分) の間、ループ実行
-          end=$((SECONDS+21000))
-
-          while [ $SECONDS -lt $end ]; do
-            echo "--- Scraper Check: $(date) ---"
+def get_current_count():
+    # ブラウザ(Chrome/Windows)のふりをするスキャナーを作成
+    scraper = cloudscraper.create_scraper(
+        browser={
+            'browser': 'chrome',
+            'platform': 'windows',
+            'desktop': True
+        }
+    )
+    
+    try:
+        # 機械的判定を避けるため、実行直後にランダムな待機(5〜10秒)を入れる
+        time.sleep(random.uniform(5, 10))
+        
+        response = scraper.get(TARGET_URL, timeout=30)
+        
+        if response.status_code == 403:
+            print("❌ CloudScraperでもブロックされました(403)。")
+            return None
             
-            # Pythonスクリプト実行（失敗しても || true で次の処理へ進む）
-            python scraper_line.py || echo "Python script failed, skipping this turn."
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        
+        # 指定されたID(#ecResultNum)内のspanを取得
+        target_span = soup.select_one('#ecResultNum span')
+        
+        if target_span:
+            text_num = target_span.get_text().strip().replace(',', '')
+            return int(text_num)
+        else:
+            print("❌ 件数表示要素が見つかりませんでした。")
+            return None
 
-            # ファイルに変更がある場合のみコミット
-            if [ -f latest_count.txt ]; then
-              git add latest_count.txt
-              if ! git diff --cached --quiet; then
-                echo "Changes detected. Pushing to GitHub..."
-                git commit -m "Update count [bot]"
-                # 競合回避のためpullしてからpush
-                git pull --rebase
-                git push || echo "Push failed, will try again next loop."
-              else
-                echo "No changes in count."
-              fi
-            fi
+    except Exception as e:
+        print(f"❌ エラー発生: {e}")
+        return None
 
-            # 待機時間（403エラー回避のため最初は60秒を推奨）
-            echo "Waiting 60 seconds..."
-            sleep 600
-          done
+def main():
+    current_count = get_current_count()
+    
+    if current_count is None:
+        # Gitエラー防止のためファイルがない場合は空作成
+        if not os.path.exists(COUNT_FILE):
+            with open(COUNT_FILE, "w") as f:
+                f.write("0")
+        return
+
+    # 前回の数値を読み込み
+    last_count = 0
+    if os.path.exists(COUNT_FILE):
+        with open(COUNT_FILE, "r") as f:
+            try:
+                last_count = int(f.read().strip())
+            except:
+                last_count = 0
+
+    print(f"前回: {last_count}件 / 今回: {current_count}件")
+
+    # 増加した場合のみDiscord通知
+    if current_count > last_count:
+        diff = current_count - last_count
+        msg = f"🔔 **新着アイテム入荷！**\n在庫が {last_count}件 → {current_count}件 に増加（+{diff}件）\n{TARGET_URL}"
+        if DISCORD_WEBHOOK_URL:
+            import requests # 通知用には標準のrequestsでOK
+            requests.post(DISCORD_WEBHOOK_URL, json={"content": msg})
+    
+    # 数値を保存
+    with open(COUNT_FILE, "w") as f:
+        f.write(str(current_count))
+
+if __name__ == "__main__":
+    main()
