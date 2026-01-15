@@ -1,67 +1,24 @@
-name: Run 2ndStreet Scraper (High Frequency)
-
-on:
-  schedule:
-    # 6時間ごとにActions自体を再起動（セッション切れやメモリ対策）
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
-
-jobs:
-  run:
-    runs-on: ubuntu-latest
-    # 1回のジョブの最大実行時間を5時間50分に設定
-    timeout-minutes: 350
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          # プッシュ権限のために必要
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      - name: Install dependencies
+- name: Run scraper loop
         run: |
-          pip install --upgrade pip
-          pip install requests beautifulsoup4
-          # requirements.txtがある場合は以下も有効にする
-          # pip install -r requirements.txt
+          # 最初に空のファイルを作っておき Gitエラーを防ぐ
+          touch latest_count.txt
           
-          # Gitの設定（コミット用）
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "github-actions"
-
-      - name: Run scraper loop
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: |
-          # 21000秒 (5時間50分) の間、ループ実行する設定
           end=$((SECONDS+21000))
-
           while [ $SECONDS -lt $end ]; do
-            echo "--- Scraper Check: $(date) ---"
+            echo "--- Checking: $(date) ---"
             
-            # 1. Pythonスクリプトを実行して件数をチェック
-            python scraper_line.py
+            # python実行（失敗しても止まらないように || true をつける）
+            python scraper_line.py || echo "Script failed, continuing..."
 
-            # 2. 件数記録ファイル (latest_count.txt) に変更があるか確認
+            # 変更があればコミット
             git add latest_count.txt
-            
-            # 変更（件数の増減）があった場合のみコミットしてGitHubに保存
             if ! git diff --cached --quiet; then
-              echo "Changes detected. Pushing to repository..."
               git commit -m "Update count [bot]"
-              # 競合回避のためpullしてからpush
               git pull --rebase
-              git push
-            else
-              echo "No changes in count."
+              git push || echo "Push failed, will try next time"
             fi
 
-            # 3. 10秒待機（ここを調整することで頻度を変えられます）
-            sleep 10
+            # ★ 10秒は短すぎて即ブロックされるため、最低でも60秒〜を推奨
+            echo "Waiting 60 seconds..."
+            sleep 60
           done
