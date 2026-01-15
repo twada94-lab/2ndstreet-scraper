@@ -2,20 +2,21 @@ name: Run 2ndStreet Scraper (High Frequency)
 
 on:
   schedule:
-    # 6時間ごとに起動（1回のジョブで長時間動かすため）
+    # 6時間ごとにActions自体を再起動（セッション切れやメモリ対策）
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    # 1回のジョブの最大実行時間を設定（念のため350分=5時間50分で打ち切り）
+    # 1回のジョブの最大実行時間を5時間50分に設定
     timeout-minutes: 350
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # プッシュ権限のために必要
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
@@ -26,36 +27,41 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install requests beautifulsoup4
+          # requirements.txtがある場合は以下も有効にする
+          # pip install -r requirements.txt
+          
+          # Gitの設定（コミット用）
           git config --local user.email "github-actions@github.com"
           git config --local user.name "github-actions"
 
       - name: Run scraper loop
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          LINE_ACCESS_TOKEN: ""
-          LINE_USER_ID: ""
-          CHROME_BIN: /usr/bin/chromium-browser
         run: |
-          # 5時間50分 (21000秒) ループさせる設定
+          # 21000秒 (5時間50分) の間、ループ実行する設定
           end=$((SECONDS+21000))
 
           while [ $SECONDS -lt $end ]; do
-            echo "--- Scraper Start: $(date) ---"
+            echo "--- Scraper Check: $(date) ---"
             
-            # スクレイピング実行
+            # 1. Pythonスクリプトを実行して件数をチェック
             python scraper_line.py
 
-            # ★重要: データのコミットとプッシュ
-            # 10秒おきのコミットは履歴が爆発するため、変更がある場合のみ実行など注意が必要
-            git add latest_items.json
+            # 2. 件数記録ファイル (latest_count.txt) に変更があるか確認
+            git add latest_count.txt
+            
+            # 変更（件数の増減）があった場合のみコミットしてGitHubに保存
             if ! git diff --cached --quiet; then
-              git commit -m "Update data [bot]"
+              echo "Changes detected. Pushing to repository..."
+              git commit -m "Update count [bot]"
               # 競合回避のためpullしてからpush
               git pull --rebase
               git push
+            else
+              echo "No changes in count."
             fi
 
-            # 10秒待機
+            # 3. 10秒待機（ここを調整することで頻度を変えられます）
             sleep 10
           done
