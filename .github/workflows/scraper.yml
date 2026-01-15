@@ -1,24 +1,67 @@
-- name: Run scraper loop
-        run: |
-          # 最初に空のファイルを作っておき Gitエラーを防ぐ
-          touch latest_count.txt
-          
-          end=$((SECONDS+21000))
-          while [ $SECONDS -lt $end ]; do
-            echo "--- Checking: $(date) ---"
-            
-            # python実行（失敗しても止まらないように || true をつける）
-            python scraper_line.py || echo "Script failed, continuing..."
+name: Run 2ndStreet Scraper (High Frequency)
 
-            # 変更があればコミット
-            git add latest_count.txt
-            if ! git diff --cached --quiet; then
-              git commit -m "Update count [bot]"
-              git pull --rebase
-              git push || echo "Push failed, will try next time"
+on:
+  schedule:
+    # 6時間ごとにジョブをリフレッシュ
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install requests beautifulsoup4
+          
+          # Gitの初期設定
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "github-actions"
+          
+          # Gitエラー防止のため、ファイルが存在しない場合は空で作っておく
+          touch latest_count.txt
+
+      - name: Run scraper loop
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          # 21000秒 (5時間50分) の間、ループ実行
+          end=$((SECONDS+21000))
+
+          while [ $SECONDS -lt $end ]; do
+            echo "--- Scraper Check: $(date) ---"
+            
+            # Pythonスクリプト実行（失敗しても || true で次の処理へ進む）
+            python scraper_line.py || echo "Python script failed, skipping this turn."
+
+            # ファイルに変更がある場合のみコミット
+            if [ -f latest_count.txt ]; then
+              git add latest_count.txt
+              if ! git diff --cached --quiet; then
+                echo "Changes detected. Pushing to GitHub..."
+                git commit -m "Update count [bot]"
+                # 競合回避のためpullしてからpush
+                git pull --rebase
+                git push || echo "Push failed, will try again next loop."
+              else
+                echo "No changes in count."
+              fi
             fi
 
-            # ★ 10秒は短すぎて即ブロックされるため、最低でも60秒〜を推奨
+            # 待機時間（403エラー回避のため最初は60秒を推奨）
             echo "Waiting 60 seconds..."
             sleep 60
           done
