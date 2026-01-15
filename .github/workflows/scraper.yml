@@ -63,5 +63,5 @@ jobs:
 
             # 待機時間（403エラー回避のため最初は60秒を推奨）
             echo "Waiting 60 seconds..."
-            sleep 60
+            sleep 600
           done
