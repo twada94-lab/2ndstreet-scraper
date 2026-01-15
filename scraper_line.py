@@ -1,152 +1,97 @@
-import os
-import json
-import time
 import requests
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
+import os
+import re
+import sys
 
-# ----------------------------
-# Discord Webhook 設定
-# ----------------------------
-# GitHub Secretsで設定したシークレット名 DISCORD_WEBHOOK_URL に合わせる
-DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "")
+# Discord設定
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
-def send_discord_message(message, max_retries=3):
-    """
-    Discord Webhookに通知を送信する（失敗時にはリトライ処理を実行）
-    """
+# 保存用ファイル名（件数だけを記録するテキストファイル）
+COUNT_FILE = "latest_count.txt"
+
+# ターゲットのURL（ご自身の検索条件のURLを入れてください）
+TARGET_URL = "https://www.2ndstreet.jp/search?..." 
+
+def send_discord_notify(message):
     if not DISCORD_WEBHOOK_URL:
-        print("⚠️ Discord Webhook URLが設定されていません")
+        print("Discord Webhook URL is not set.")
         return
-    
-    url = DISCORD_WEBHOOK_URL
-    headers = {"Content-Type": "application/json"}
-    
-    # Discordのメッセージ形式 (テキストのみ)
-    data = {"content": message} 
+    data = {"content": message}
+    requests.post(DISCORD_WEBHOOK_URL, json=data)
 
-    for attempt in range(max_retries):
-        res = requests.post(url, headers=headers, json=data)
-        status_code = res.status_code
+def get_current_count():
+    try:
+        # User-Agentを設定してブラウザのふりをする
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        }
+        response = requests.get(TARGET_URL, headers=headers, timeout=10)
+        response.raise_for_status()
         
-        # Discord Webhookは通常 204 No Content が成功レスポンス
-        if status_code in (200, 204):
-            print(f"📤 Discord送信 (試行 {attempt + 1}/{max_retries}): 成功 (Status: {status_code})")
-            break
-        elif status_code == 429:
-            # 429 Too Many Requests の場合、リトライ処理
-            wait_time = 5 * (attempt + 1)
-            print(f"🚨 429 Too Many Requests. {wait_time}秒待機して再試行します...")
-            time.sleep(wait_time)
-        elif status_code in (400, 404):
-            # Webhook URLが無効、またはリクエスト形式が不正
-            print(f"❌ 致命的なエラー {status_code}。URLまたはデータ形式を確認してください。レスポンス: {res.text}")
-            break
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        # ★重要: 件数が書かれている場所を取得
+        # 2ndStreetの場合、通常 <span class="srchNum">123</span> のような箇所か、
+        # ヘッダーテキスト内の「全 123件」などを探します。
+        # ※ 実際のHTMLに合わせてクラス名は調整してください
+        
+        # 例: ページ内の「件」を含むテキストを探して数字を抽出する汎用的な方法
+        # 特定のクラスがわかっている場合は soup.select_one('.className').text などが良いです
+        body_text = soup.body.get_text()
+        
+        # 正規表現で「全 XXX 件」や「XXX件」の数字を探す
+        # サイトによって表記が違うため、実際に取得できるテキストに合わせて調整が必要です
+        # ここでは簡易的に「数字 + 件」のパターンで最初の数字を取得します
+        match = re.search(r'([\d,]+)\s*件', body_text)
+        
+        if match:
+            # カンマを除去して数値化 (例: "1,200" -> 1200)
+            return int(match.group(1).replace(',', ''))
         else:
-            wait_time = 2 * (attempt + 1)
-            print(f"⚠️ エラー {status_code}。{wait_time}秒待機して再試行します。")
-            time.sleep(wait_time)
-    else:
-        print(f"💥 Discord通知が {max_retries} 回失敗しました。処理をスキップします。")
+            print("件数が見つかりませんでした。")
+            return None
 
-# ----------------------------
-# Chrome設定 (必須)
-# ----------------------------
-def get_driver():
-    options = Options()
-    options.add_argument("--headless")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--window-size=1920,1080")
-    options.add_argument("--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                         "AppleWebKit/537.36 (KHTML, like Gecko) "
-                         "Chrome/128.0.0.0 Safari/537.36")
+    except Exception as e:
+        print(f"Error fetching data: {e}")
+        return None
 
-    possible_paths = [
-        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-        "/usr/bin/google-chrome",
-        "/usr/bin/chromium"
-    ]
-    chrome_path = next((p for p in possible_paths if os.path.exists(p)), None)
-    if chrome_path:
-        options.binary_location = chrome_path
+def main():
+    # 1. 現在の件数を取得
+    current_count = get_current_count()
+    if current_count is None:
+        return
+
+    print(f"現在の件数: {current_count}")
+
+    # 2. 前回の件数を読み込み
+    last_count = 0
+    if os.path.exists(COUNT_FILE):
+        with open(COUNT_FILE, "r") as f:
+            try:
+                content = f.read().strip()
+                if content:
+                    last_count = int(content)
+            except ValueError:
+                last_count = 0
     
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    print(f"前回の件数: {last_count}")
 
-# ----------------------------
-# スクレイピング処理 (必須)
-# ----------------------------
-def get_items(url):
-    driver = get_driver()
-    driver.get(url)
-    time.sleep(8)
+    # 3. 比較ロジック: 現在の件数が前回より多ければ通知
+    if current_count > last_count:
+        diff = current_count - last_count
+        msg = f"🔔 **新着アイテムがあります！**\n在庫が {last_count}件 → {current_count}件 に増えました（+{diff}件）\n{TARGET_URL}"
+        print("通知を送信します...")
+        send_discord_notify(msg)
+    elif current_count < last_count:
+        print(f"在庫が減りました ({last_count} -> {current_count})。通知はしません。")
+    else:
+        print("件数に変化はありません。")
 
-    soup = BeautifulSoup(driver.page_source, "html.parser")
-    driver.quit()
+    # 4. 最新の件数をファイルに保存
+    # (増えたときだけでなく、減ったときも次回のために更新しておく必要があります)
+    with open(COUNT_FILE, "w") as f:
+        f.write(str(current_count))
 
-    items = []
-    for li in soup.select("ul.itemCardList li"):
-        name = li.select_one(".itemCard_name")
-        link = li.select_one("a[href^='/goods/detail/']")
-        if not (name and link):
-            continue
-        items.append({
-            "name": name.get_text(strip=True),
-            "url": "https://www.2ndstreet.jp" + link.get("href")
-        })
-    print(f"✅ {len(items)} 件取得: {url}")
-    return items
-
-# ----------------------------
-# メイン処理
-# ----------------------------
 if __name__ == "__main__":
-    favorites = json.load(open("favorites.json", "r", encoding="utf-8"))
-    latest_items = {}
-    
-    # ✅ 修正済み: message_lines の初期化
-    message_lines = [] 
-
-    # 前回データをロード
-    old_data = {}
-    if os.path.exists("latest_items.json"):
-        try:
-            old_data = json.load(open("latest_items.json", "r", encoding="utf-8"))
-        except json.JSONDecodeError:
-            print("⚠️ latest_items.json が壊れていたため初期化します。")
-            old_data = {}
-
-    for fav in favorites:
-        name = fav["name"]
-        url = fav["url"]
-        print(f"🔍 {name} をチェック中...")
-
-        new_items = get_items(url)
-        latest_items[name] = new_items
-
-        old_urls = {i["url"] for i in old_data.get(name, [])}
-        new_entries = [i for i in new_items if i["url"] not in old_urls]
-
-        if new_entries:
-            count = len(new_entries)
-            # 新着件数とカテゴリ名のみをメッセージに追加（URLは含めない）
-            message_lines.append(f"🎉 新着あり！【{name}】に {count} 件の新着商品があります。")
-            message_lines.append("") # 区切り
-
-    # 最新データを保存
-    with open("latest_items.json", "w", encoding="utf-8") as f:
-        json.dump(latest_items, f, ensure_ascii=False, indent=2)
-
-    # Discord通知
-    if message_lines:
-        final_message = "--- 2ndStreet 新着通知 ---\n" + "\n".join(message_lines).strip()
-        send_discord_message(final_message) 
-        print("✅ 新着を通知しました。")
-    else:
-        print("🕊 新着なし。")
-
-    print("完了 ✅")
+    main()
