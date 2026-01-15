@@ -22,7 +22,7 @@ def send_discord_notify(message):
 
 def get_current_count():
     try:
-        # User-Agentを設定してブラウザのふりをする
+        # User-Agentを設定（必須）
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
@@ -31,25 +31,18 @@ def get_current_count():
         
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # ★重要: 件数が書かれている場所を取得
-        # 2ndStreetの場合、通常 <span class="srchNum">123</span> のような箇所か、
-        # ヘッダーテキスト内の「全 123件」などを探します。
-        # ※ 実際のHTMLに合わせてクラス名は調整してください
+        # ★変更点: 画像の構造に合わせてピンポイントで取得
+        # <div id="ecResultNum"> の中の <span> タグを取得
+        target_span = soup.select_one('#ecResultNum span')
         
-        # 例: ページ内の「件」を含むテキストを探して数字を抽出する汎用的な方法
-        # 特定のクラスがわかっている場合は soup.select_one('.className').text などが良いです
-        body_text = soup.body.get_text()
-        
-        # 正規表現で「全 XXX 件」や「XXX件」の数字を探す
-        # サイトによって表記が違うため、実際に取得できるテキストに合わせて調整が必要です
-        # ここでは簡易的に「数字 + 件」のパターンで最初の数字を取得します
-        match = re.search(r'([\d,]+)\s*件', body_text)
-        
-        if match:
-            # カンマを除去して数値化 (例: "1,200" -> 1200)
-            return int(match.group(1).replace(',', ''))
+        if target_span:
+            # テキストを取得 (例: "22,352")
+            text_num = target_span.get_text().strip()
+            
+            # カンマを除去して数値化
+            return int(text_num.replace(',', ''))
         else:
-            print("件数が見つかりませんでした。")
+            print("件数表示(ecResultNum)が見つかりませんでした。")
             return None
 
     except Exception as e:
