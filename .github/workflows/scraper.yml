@@ -1,20 +1,21 @@
-name: Run 2ndStreet Scraper every 15 minutes
+name: Run 2ndStreet Scraper (High Frequency)
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
-  # ★ 変更点: インデントを修正し、手動実行を確実に有効化
+    # 6時間ごとに起動（1回のジョブで長時間動かすため）
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
   run:
     runs-on: ubuntu-latest
+    # 1回のジョブの最大実行時間を設定（念のため350分=5時間50分で打ち切り）
+    timeout-minutes: 350
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # プッシュバック権限を持つトークンが必要
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
@@ -26,23 +27,35 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "github-actions"
 
-      - name: Run scraper
+      - name: Run scraper loop
         env:
-          # ★ 変更点: Discord Webhook URLを使用
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          # LINE関連の環境変数は空にして無効化
           LINE_ACCESS_TOKEN: ""
           LINE_USER_ID: ""
           CHROME_BIN: /usr/bin/chromium-browser
         run: |
-          python scraper_line.py
+          # 5時間50分 (21000秒) ループさせる設定
+          end=$((SECONDS+21000))
 
-      - name: Commit latest data
-        run: |
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "github-actions"
-          git add latest_items.json
-          # 変更がなければコミットしない
-          git diff --cached --quiet || git commit -m "Update latest_items.json [bot]"
-          git push
+          while [ $SECONDS -lt $end ]; do
+            echo "--- Scraper Start: $(date) ---"
+            
+            # スクレイピング実行
+            python scraper_line.py
+
+            # ★重要: データのコミットとプッシュ
+            # 10秒おきのコミットは履歴が爆発するため、変更がある場合のみ実行など注意が必要
+            git add latest_items.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Update data [bot]"
+              # 競合回避のためpullしてからpush
+              git pull --rebase
+              git push
+            fi
+
+            # 10秒待機
+            sleep 10
+          done
