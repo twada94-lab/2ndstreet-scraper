@@ -1,15 +1,14 @@
-name: Run 2ndStreet Scraper (CloudScraper Mode)
+name: Run 2ndStreet Scraper (Standard 15min)
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # 6時間おきに再起動
-  workflow_dispatch: # 手動実行
+    # 15分おきに起動
+    - cron: "*/15 * * * *"
+  workflow_dispatch: # 手動実行用
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,31 +27,19 @@ jobs:
           
           git config --local user.email "github-actions@github.com"
           git config --local user.name "github-actions"
+          # ファイルがない場合のエラー防止
           touch latest_count.txt
 
-      - name: Run scraper loop
+      - name: Run scraper
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          end=$((SECONDS+21000)) # 約5時間50分稼働
+          # 1回だけ実行（ループはさせない）
+          python scraper_line.py
 
-          while [ $SECONDS -lt $end ]; do
-            echo "--- Scraper Check: $(date) ---"
-            
-            # スクリプト実行
-            python scraper_line.py || echo "Python failed, continuing..."
-
-            # 変化があればGitHubへ保存
-            if [ -f latest_count.txt ]; then
-              git add latest_count.txt
-              if ! git diff --cached --quiet; then
-                git commit -m "Update count [bot]"
-                git pull --rebase
-                git push || echo "Push failed, will retry next turn."
-              fi
-            fi
-
-            # 待機時間（まずは300秒=5分で安定性を確認してください）
-            echo "Waiting 300 seconds..."
-            sleep 300
-          done
+          # 件数ファイルに変更があればGitHubに保存
+          git add latest_count.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Update count [bot]"
+            git push
+          fi
