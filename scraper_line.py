@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import os
 import time
 import random
+import requests
 
 # 環境変数
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
@@ -11,7 +12,7 @@ COUNT_FILE = "latest_count.txt"
 TARGET_URL = "https://www.2ndstreet.jp/search?..." 
 
 def get_current_count():
-    # ブラウザ(Chrome/Windows)のふりをするスキャナーを作成
+    # ブラウザのふりをするスキャナーを作成
     scraper = cloudscraper.create_scraper(
         browser={
             'browser': 'chrome',
@@ -21,13 +22,13 @@ def get_current_count():
     )
     
     try:
-        # 機械的判定を避けるため、実行直後にランダムな待機(5〜10秒)を入れる
-        time.sleep(random.uniform(5, 10))
+        # 念のため実行直後に少し待機(3〜7秒)
+        time.sleep(random.uniform(3, 7))
         
         response = scraper.get(TARGET_URL, timeout=30)
         
         if response.status_code == 403:
-            print("❌ CloudScraperでもブロックされました(403)。")
+            print("❌ アクセスが拒否されました(403)。しばらく時間を置く必要があります。")
             return None
             
         response.raise_for_status()
@@ -51,10 +52,6 @@ def main():
     current_count = get_current_count()
     
     if current_count is None:
-        # Gitエラー防止のためファイルがない場合は空作成
-        if not os.path.exists(COUNT_FILE):
-            with open(COUNT_FILE, "w") as f:
-                f.write("0")
         return
 
     # 前回の数値を読み込み
@@ -73,7 +70,6 @@ def main():
         diff = current_count - last_count
         msg = f"🔔 **新着アイテム入荷！**\n在庫が {last_count}件 → {current_count}件 に増加（+{diff}件）\n{TARGET_URL}"
         if DISCORD_WEBHOOK_URL:
-            import requests # 通知用には標準のrequestsでOK
             requests.post(DISCORD_WEBHOOK_URL, json={"content": msg})
     
     # 数値を保存
